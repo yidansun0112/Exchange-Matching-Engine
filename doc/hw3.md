@@ -31,6 +31,7 @@
       * Buy: buyer's account credited the shares of the symbol purchased
       * Sell: the seller's account is credited for the sale price
 * open order
+  
   * when first placed, it is open
 * match order
   * both order are open
