@@ -13,15 +13,12 @@
 #include <sstream>
 
 
-class Client{
+class xmlPrinter{
 private:
-  const char* port_num;
-  int server_fd;
-  std::vector<std::string> requestXMLs;
-  void sendRequest(int server_fd);
-  void buildConnection();
+  std::string getCreateXML(std::vector<std::string> tokens);
+  std::string getTransactionXML(std::vector<std::string> tokens);
+  std::string createHeader();
 public:
-  Client():port_num("12345"){};
-  void run();
+  std::string createRequestXML(std::string input);
+  std::string createResponseXML();
 };
-

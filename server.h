@@ -8,10 +8,9 @@
 #include <unistd.h>
 #include <arpa/inet.h>
 #include <string>
-#include <xercesc/parsers/XercesDOMParser.hpp>
-#include <xercesc/dom/DOM.hpp>
-#include <xercesc/sax/HandlerBase.hpp>
-
+#include <fstream>
+#include <vector>
+#include "xml/rapidxml.hpp"
 class Server{
  private:
   const char* port_num;
@@ -20,6 +19,7 @@ class Server{
   std::vector<char> responseXMLs;
   void setUpListener();
   void handleRequest(int client_fd);
+  std::string createResponse();
 public:
   Server() :port_num("12345"){};
   void run();
