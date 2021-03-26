@@ -13,7 +13,7 @@ int main (int argc, char *argv[])
   try{
     //Establish a connection to the database
     //Parameters: database name, user name, user password
-    C = new connection("dbname=EXCHANGE user=postgres password=passw0rd");
+    C = new connection("dbname=exchange user=postgres password=passw0rd");
     if (C->is_open()) {
       cout << "Opened database successfully: " << C->dbname() << endl;
     } else {
@@ -24,3 +24,5 @@ int main (int argc, char *argv[])
     cerr << e.what() << std::endl;
     return 1;
   }
+
+}
