@@ -16,6 +16,12 @@ int main (int argc, char *argv[])
     return 1;
   }
 
-  
+  db.createTables();
+  string msg=db.createSymbol("abc",0,100);
+  cout<<msg<<endl;
 
+  db.disconnect();
+
+  return 0;
+  
 }
