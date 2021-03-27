@@ -31,8 +31,8 @@ int main (int argc, char *argv[])
   string msg4=db.createOrder("abc",50,100,0);
   cout<<"id 5 "<<msg4<<endl;
 
-
-  vector<string> v=db.queryOrder(0);
+  
+  vector<string> v=db.cancelOrder(0);
   for(vector<string>::iterator i=v.begin();i!=v.end();++i){
     cout<<*i<<endl;
   }
