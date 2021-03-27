@@ -1,6 +1,5 @@
 #include "server.h"
 
-using namespace rapidxml;
 
 void Server::setUpListener(){
   struct addrinfo hints, *ai;
@@ -53,22 +52,5 @@ void Server::handleRequest(int client_fd){
     return;
   }
   std::vector<char> requestXML(buf, buf + size);
-  xml_document<> doc;
-  xml_node<> * root_node = NULL;
-  doc.parse<0>(&requestXML[0]);
-  if ((root_node = doc.first_node("create")) != NULL) {
-    
-  } else if ((root_node = doc.first_node("query")) != NULL) {
-    
-  } else if ((root_node = doc.first_node("transaction")) != NULL) {
-    
-  }else {
-    fprintf(stdout,"Invalid XML");
-    return;
-  }
-  
-}
-
-std::string createResponse(){
   
 }

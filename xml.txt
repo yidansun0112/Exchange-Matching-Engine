@@ -1,8 +1,1 @@
-create user 12345 100 symbol SYM 12345 100
-create user 54321 200 symbol ABC 54321 2 12345 10 symbol SYM 12345 10
-create symbol ABC 54321 2 12345 10 symbol SYM 12345 10
-create user 54321 200 34567 2
 transactions 12345 order abc 123 456 
-transactions 12345 cancel 12345
-transactions 12345 query 56789
-transactions 12345 query 345 cancel 1234578 order abc 123 456 

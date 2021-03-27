@@ -18,7 +18,7 @@ std::string xmlPrinter::createHeader() {
 }
 
 std::string xmlPrinter::getCreateXML(std::vector<std::string> tokens) {
-  std::string ans = createHeader();
+  std::string ans;
   ans +="<create>\n";
   size_t i = 1;
   size_t size = tokens.size();
@@ -57,7 +57,7 @@ std::string xmlPrinter::getCreateXML(std::vector<std::string> tokens) {
 }
 
 std::string xmlPrinter::getTransactionXML(std::vector<std::string> tokens) {
-  std::string ans = createHeader();
+  std::string ans;
   ans += "<transactions id=\"";
   ans += tokens[1];
   ans += "\">\n";
@@ -78,12 +78,12 @@ std::string xmlPrinter::getTransactionXML(std::vector<std::string> tokens) {
       i++;
       ans += "  <query id=\"";
       ans += tokens[i++];
-      ans += "\">\n";   
+      ans += "\"/>\n";   
     } else if (tokens[i] == "cancel"){
       i++;
       ans += "  <cancel id=\"";
       ans += tokens[i++];
-      ans += "\">\n";   
+      ans += "\"/>\n";   
     } else {
       break;
     }
