@@ -132,3 +132,56 @@ string Database::createSymbol(string name, int owner, int amount){
   }
   return "success";
 }
+
+string Database::createOrder(string name,double amount,double price, int account_id){
+  stringstream ss;
+  work W(*C);
+  ss<<"INSERT INTO ORDERS (SYM,AMOUNT,PRICE,TYPE,STATUS,ACCOUNT_ID,TRANS_ID) VALUES(";
+  ss<<W.quote(name)<<","<<amount<<","<<price<<",";
+  W.commit();
+  try{
+    if(amount<0){
+      ss<<"'sell'"<<",";
+      minusSellAmount(name,-amount,account_id);
+    }else if(amount>0){
+      ss<<"'buy'"<<",";
+      minusBuyBalance(amount,price,account_id);
+    }else{
+      return "Order amount cannot be zero";
+    }
+    ss<<"'open'"<<","<<account_id<<","<<trans_id<<");\n";
+    string command=ss.str();
+    executeSql(command);
+  }catch(pqxx::foreign_key_violation &e){
+    return "This id does not exist in Account";
+  }catch(pqxx::check_violation &e){
+    if(amount<0){
+      return "You don't have enough amount to sell";
+    }else{
+      return "You don't have enough balance to buy";
+    }
+  }
+  stringstream sss;
+  sss<<"success id is "<<trans_id;
+  trans_id++;
+  return sss.str();
+}
+
+
+void Database::minusSellAmount(string name,double amount,int account_id){
+  stringstream ss;
+  work W(*C);
+  ss<<"UPDATE SYMBOL SET AMOUNT=SYMBOL.AMOUNT-"<<amount<<" WHERE SYMBOL.NAME="<<W.quote(name);
+  ss<<" AND OWNER="<<account_id<<";\n";
+  W.commit();
+  cout<<ss.str();
+  executeSql(ss.str());
+}
+
+void Database::minusBuyBalance(double amount, double price,int account_id){
+  stringstream ss;
+  double cost=price*amount;
+  ss<<"UPDATE ACCOUNT SET BALANCE=BALANCE-"<<cost<<" WHERE ID="<<account_id<<";\n";
+  cout<<ss.str();
+  executeSql(ss.str());
+}
