@@ -137,7 +137,8 @@ string Database::createOrder(string name,double amount,double price, int account
   stringstream ss;
   work W(*C);
   ss<<"INSERT INTO ORDERS (SYM,AMOUNT,PRICE,TYPE,STATUS,ACCOUNT_ID,TRANS_ID,TIME) VALUES(";
-  ss<<W.quote(name)<<",";
+  double amt=amount>0?amount:-amount;
+  ss<<W.quote(name)<<","<<amt<<","<<price<<",";
   W.commit();
   try{
     if(amount<0){
@@ -150,8 +151,9 @@ string Database::createOrder(string name,double amount,double price, int account
     }else{
       return "Order amount cannot be zero";
     }
-    ss<<amount<<","<<price<<","<<"'open'"<<","<<account_id<<","<<trans_id<<","<<getCurrTime()<<");\n";
+    ss<<"'open'"<<","<<account_id<<","<<trans_id<<","<<getCurrTime()<<");\n";
     string command=ss.str();
+    cout<<command;
     executeSql(command);
   }catch(pqxx::foreign_key_violation &e){
     return "This id does not exist in Account";
