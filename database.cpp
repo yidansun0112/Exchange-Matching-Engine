@@ -235,33 +235,62 @@ vector<string> Database::cancelOrder(int trans_id){
   return queryOrder(trans_id);
 }
 
-void Database::matchSellOrder(string name, double amount, double price, int account_id){
-  // stringstream ss;
-  // ss<<"SELECT * FROM ORDERS WHERE STATUS='open' AND TYPE='buy' AND PRICE>="<<price<<" AND SYM="<<"'"<<name<<"'";
-  // ss<<"ORDER BY PRICE DESC, TIME;\n";
-  // work W(*C);
-  // result r=W.exec(ss.str());
-  // int num_row=r.size();
-  // int i=0;
-  // while(amount>0&&i<num_row){
-  //   pqxx::row const row=r[i];
-  //   double buy_amount=row[2].as<double>();
-
-  // }
+void Database::matchSellOrder(string name, double amount, double price, int account_id, long time, int trans_id){
+  stringstream ss;
+  ss<<"SELECT * FROM ORDERS WHERE STATUS='open' AND TYPE='buy' AND PRICE>="<<price<<" AND SYM="<<"'"<<name<<"'";
+  ss<<"ORDER BY PRICE DESC, TIME;\n";
+  work W(*C);
+  result r=W.exec(ss.str());
+  int num_row=r.size();
+  int i=0;
+  while(amount>0&&i<num_row){
+    pqxx::row const row=r[i];
+    int buy_transId=row[7].as<int>();
+    int buy_accountId=row[6].as<int>();
+    double buy_amount=row[2].as<double>();
+    double buy_price=row[3].as<double>();
+    long buy_time=row[8].as<long>();
+    double execPrice=price;
+    if(buy_time<time){
+      execPrice=buy_price;
+    }
+    if(amount==buy_amount){
+      changeStatus(trans_id,execPrice);
+      changeStatus(buy_transId,execPrice);
+      amount=0;
+    }else if(amount<buy_amount){
+      changeStatus(trans_id,execPrice);
+      addNewLine(buy_transId, execPrice,amount,name, buy_accountId,"'buy'");
+      amount=0;
+    }else{
+      changeStatus(buy_transId,execPrice);
+      addNewLine(trans_id, execPrice,buy_amount,name,account_id,"'sell'");
+      amount-=buy_amount;
+    }
+    i++;
+  }
 }
 
 
-void Database::matchBuyOrder(string name, double amount, double price, int account_id){
+void Database::matchBuyOrder(string name, double amount, double price, int account_id, long time, int trans_id){
 
 }
 
 
-void Database::executeAddNewLine(){
-
+void Database::addNewLine(int trans_id, double price,double amount,string name, int account_id, string type){
+  stringstream s1;
+  s1<<"UPDATE ORDERS SET AMOUNT=ORDERS.AMOUNT-"<<amount<<" WHERE TRANS_ID="<<trans_id<<" AND STATUS='open';\n";
+  executeSql(s1.str());
+  stringstream s2;
+  s2<<"INSERT INTO ORDERS (SYM,AMOUNT,PRICE,TYPE,STATUS,ACCOUNT_ID,TRANS_ID,TIME) VALUES(";
+  s2<<"'"<<name<<"',"<<amount<<","<<price<<","<<type<<","<<"'executed',"<<account_id<<","<<trans_id<<","<<getCurrTime()<<";\n";
+  executeSql(s2.str());
 }
 
-void Database::executeChangeStatus(){
-
+void Database::changeStatus(int trans_id, double price){
+  stringstream ss;
+  ss<<"UPDATE ORDERS SET STATUS='executed', TIME="<<getCurrTime()<<", PRICE="<<price<<" WHERE TRANS_ID="<<trans_id<<" AND STATUS='open';\n";
+  executeSql(ss.str());
 }
 
 long Database::getCurrTime(){
