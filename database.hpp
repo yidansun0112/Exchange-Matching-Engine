@@ -1,6 +1,7 @@
 #include <iostream>
 #include <pqxx/pqxx>
 #include <sstream>
+#include <vector>
 #include "MyException.hpp"
 
 using namespace std;
@@ -31,4 +32,5 @@ class Database{
     string createOrder(string name,double amount,double price, int account_id);
     void minusSellAmount(string name,double amount,int account_id);
     void minusBuyBalance(double amount, double price,int account_id);
+    vector<string> queryOrder(int trans_id);
 };

@@ -194,3 +194,34 @@ void Database::minusBuyBalance(double amount, double price,int account_id){
   cout<<ss.str();
   executeSql(ss.str());
 }
+
+vector<string> Database::queryOrder(int trans_id){
+  stringstream ss;
+  vector<string> v;
+  ss<<"SELECT * FROM ORDERS WHERE TRANS_ID="<<trans_id<<";\n";
+  work W(*C);
+  result r=W.exec(ss.str());
+  int num_rows=r.size();
+  for(int i=0;i<num_rows;i++){
+    row =r[i];
+    int num_col=row.size();
+    for(int j=0;i<num_col;j++){
+      if(row[5].c_str()=="open"){
+        stringstream ss;
+        ss<<"open shares="<<row[2].c_str();
+        v.push_back(ss.str());
+      }
+      if(row[5].c_str()=="canceled"){
+        stringstream ss;
+        ss<<"canceled shares="<<row[2].c_str()<<" time="<<row[8];
+        v.push_back(ss.str());
+      }
+      if(row[5].c_str()=="executed"){
+        stringstream ss;
+        ss<<"executed shares="<<row[2].c_str()<<" price="<<row[3.c_str()<<" time="<<row[8];
+        v.push_back(ss.str());
+      }
+    }
+  }
+  return v;
+}
