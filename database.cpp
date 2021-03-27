@@ -57,7 +57,7 @@ void Database::createTableOrder(){
   string status="STATUS status,\n";
   string account_id="ACCOUNT_ID INT,\n";
   string trans_id="TRANS_ID INT,\n";
-  string time="TIME TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,\n";
+  string time="TIME BIGINT NOT NULL,\n";
   string primary_key="CONSTRAINT ORDERPK PRIMARY KEY(ID),\n";
   string foreign_key="CONSTRAINT ACCOUNTFK FOREIGN KEY(ACCOUNT_ID) REFERENCES ACCOUNT(ID) ON DELETE SET NULL ON UPDATE CASCADE\n";
   string total=header+id+symbol+amount+price+type+status+account_id+trans_id+time+primary_key+foreign_key+ender;
@@ -136,20 +136,21 @@ string Database::createSymbol(string name, int owner, int amount){
 string Database::createOrder(string name,double amount,double price, int account_id){
   stringstream ss;
   work W(*C);
-  ss<<"INSERT INTO ORDERS (SYM,AMOUNT,PRICE,TYPE,STATUS,ACCOUNT_ID,TRANS_ID) VALUES(";
-  ss<<W.quote(name)<<","<<amount<<","<<price<<",";
+  ss<<"INSERT INTO ORDERS (SYM,AMOUNT,PRICE,TYPE,STATUS,ACCOUNT_ID,TRANS_ID,TIME) VALUES(";
+  ss<<W.quote(name)<<",";
   W.commit();
   try{
     if(amount<0){
       ss<<"'sell'"<<",";
-      minusSellAmount(name,-amount,account_id);
+      amount=-amount;
+      minusSellAmount(name,amount,account_id);
     }else if(amount>0){
       ss<<"'buy'"<<",";
       minusBuyBalance(amount,price,account_id);
     }else{
       return "Order amount cannot be zero";
     }
-    ss<<"'open'"<<","<<account_id<<","<<trans_id<<");\n";
+    ss<<amount<<","<<price<<","<<"'open'"<<","<<account_id<<","<<trans_id<<","<<getCurrTime()<<");\n";
     string command=ss.str();
     executeSql(command);
   }catch(pqxx::foreign_key_violation &e){
@@ -227,9 +228,41 @@ vector<string> Database::queryOrder(int trans_id){
 
 vector<string> Database::cancelOrder(int trans_id){
   stringstream ss;
-  ss<<"UPDATE ORDERS SET STATUS='canceled', TIME=CURRENT_TIMESTAMP WHERE TRANS_ID="<<trans_id<<" AND STATUS='open';\n";
+  ss<<"UPDATE ORDERS SET STATUS='canceled', TIME="<<getCurrTime()<<" WHERE TRANS_ID="<<trans_id<<" AND STATUS='open';\n";
   executeSql(ss.str());
   return queryOrder(trans_id);
 }
 
+void Database::matchSellOrder(string name, double amount, double price, int account_id){
+  // stringstream ss;
+  // ss<<"SELECT * FROM ORDERS WHERE STATUS='open' AND TYPE='buy' AND PRICE>="<<price<<" AND SYM="<<"'"<<name<<"'";
+  // ss<<"ORDER BY PRICE DESC, TIME;\n";
+  // work W(*C);
+  // result r=W.exec(ss.str());
+  // int num_row=r.size();
+  // int i=0;
+  // while(amount>0&&i<num_row){
+  //   pqxx::row const row=r[i];
+  //   double buy_amount=row[2].as<double>();
 
+  // }
+}
+
+
+void Database::matchBuyOrder(string name, double amount, double price, int account_id){
+
+}
+
+
+void Database::executeAddNewLine(){
+
+}
+
+void Database::executeChangeStatus(){
+
+}
+
+long Database::getCurrTime(){
+  time_t now=time(NULL);
+  return (long)now;
+}

@@ -34,4 +34,9 @@ class Database{
     void minusBuyBalance(double amount, double price,int account_id);
     vector<string> queryOrder(int trans_id);
     vector<string> cancelOrder(int trans_id);
+    void matchSellOrder(string name, double amount, double price, int account_id);
+    void matchBuyOrder(string name, double amount, double price, int account_id);
+    void executeAddNewLine();
+    void executeChangeStatus();
+    long getCurrTime();
 };
