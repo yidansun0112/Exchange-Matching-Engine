@@ -161,7 +161,7 @@ string Database::createOrder(string name,double amount,double price, int account
       return "You don't have enough balance to buy";
     }
   }catch (MyException &e){
-    reutrn e.what();
+    return e.what();
   }
   stringstream sss;
   sss<<"success id is "<<trans_id;
@@ -178,8 +178,10 @@ void Database::minusSellAmount(string name,double amount,int account_id){
   W.commit();
   string command=ss.str();
   string select="SELECT * FROM SYMBOL "+command.substr(command.find("WHERE"));
-  result r=W.exec(select);
-  if(r.size==0){
+  work w(*C);
+  result r=w.exec(select);
+  w.commit();
+  if(r.size()==0){
     throw MyException("Cannot find this symbol");
   }
   executeSql(command);

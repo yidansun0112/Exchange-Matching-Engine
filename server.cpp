@@ -25,7 +25,7 @@ int main (int argc, char *argv[])
   string msg2=db.createSymbol("abc",0,-100);
   cout<<msg2<<endl;
 
-  string msg3=db.createOrder("abc",-50,100,0);
+  string msg3=db.createOrder("a",-50,100,0);
   cout<<msg3<<endl;
 
   string msg4=db.createOrder("abc",50,100,5);
