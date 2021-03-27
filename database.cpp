@@ -160,6 +160,8 @@ string Database::createOrder(string name,double amount,double price, int account
     }else{
       return "You don't have enough balance to buy";
     }
+  }catch (MyException &e){
+    reutrn e.what();
   }
   stringstream sss;
   sss<<"success id is "<<trans_id;
@@ -174,8 +176,13 @@ void Database::minusSellAmount(string name,double amount,int account_id){
   ss<<"UPDATE SYMBOL SET AMOUNT=SYMBOL.AMOUNT-"<<amount<<" WHERE SYMBOL.NAME="<<W.quote(name);
   ss<<" AND OWNER="<<account_id<<";\n";
   W.commit();
-  cout<<ss.str();
-  executeSql(ss.str());
+  string command=ss.str();
+  string select="SELECT * FROM SYMBOL "+command.substr(command.find("WHERE"));
+  result r=W.exec(select);
+  if(r.size==0){
+    throw MyException("Cannot find this symbol");
+  }
+  executeSql(command);
 }
 
 void Database::minusBuyBalance(double amount, double price,int account_id){
