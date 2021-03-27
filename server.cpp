@@ -17,8 +17,13 @@ int main (int argc, char *argv[])
   }
 
   db.createTables();
-  string msg=db.createSymbol("abc",0,100);
+  string msg=db.createAccount(0,-100);
   cout<<msg<<endl;
+  db.createAccount(0,100);
+  string msg1=db.createSymbol("abc",0,100);
+  cout<<msg1<<endl;
+  string msg2=db.createSymbol("abc",0,-100);
+  cout<<msg2<<endl;
 
   db.disconnect();
 

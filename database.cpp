@@ -27,8 +27,9 @@ void Database::createTableSymbol(){
   string owner="OWNER INT NOT NULL,\n";
   string amount="AMOUNT FLOAT,\n";
   string primary_key="CONSTRAINT SYMPK PRIMARY KEY(NAME,OWNER),\n";
-  string foreign_key="CONSTRAINT OWNERFK FOREIGN KEY(OWNER) REFERENCES ACCOUNT(ID) ON DELETE SET NULL ON UPDATE CASCADE\n";
-  string total=header+name+owner+amount+primary_key+foreign_key+ender;
+  string foreign_key="CONSTRAINT OWNERFK FOREIGN KEY(OWNER) REFERENCES ACCOUNT(ID) ON DELETE SET NULL ON UPDATE CASCADE,\n";
+  string amount_nonneg="CONSTRAINT amountnonneg CHECK (AMOUNT>=0)\n";
+  string total=header+name+owner+amount+primary_key+foreign_key+amount_nonneg+ender;
   executeSql(total);
 }
 
@@ -37,8 +38,9 @@ void Database::createTableAccount(){
   string ender=");\n";
   string id="ID INT NOT NULL,\n";
   string balance="BALANCE FLOAT,\n";
-  string primary_key="CONSTRAINT IDPK PRIMARY KEY(ID)\n";
-  string total=header+id+balance+primary_key+ender;
+  string primary_key="CONSTRAINT IDPK PRIMARY KEY(ID),\n";
+  string baln_nonneg="CONSTRAINT balnnonneg CHECK (BALANCE>=0)\n";
+  string total=header+id+balance+primary_key+baln_nonneg+ender;
   executeSql(total);
 }
 
@@ -100,9 +102,6 @@ void Database::createStatus(){
 }
 
 string Database::createAccount(int id, double balance){
-  if(balance<0){
-    return "Account balance cannot be negative";
-  }
   stringstream ss;
   ss<<"INSERT INTO ACCOUNT VALUES("<<id<<","<<balance<<");\n";
   string command=ss.str();
@@ -110,14 +109,13 @@ string Database::createAccount(int id, double balance){
     executeSql(command);
   }catch(pqxx::unique_violation &e){
     return "This id already exists";
+  }catch(pqxx::check_violation &e){
+    return "Account balance cannot be negative";
   }
   return "success";
 }
 
 string Database::createSymbol(string name, int owner, int amount){
-  if(amount<0){
-    return "Symbol amount cannot be negative";
-  }
   stringstream ss;
   work W(*C);
   ss<<"INSERT INTO SYMBOL VALUES("<<W.quote(name)<<","<<owner<<","<<amount<<") ";
@@ -127,8 +125,10 @@ string Database::createSymbol(string name, int owner, int amount){
   string command=ss.str();
   try{
     executeSql(command);
-  }catch(pqxx::pqxx_exception &e){
+  }catch(pqxx::foreign_key_violation &e){
     return "This id does not exist in Account";
+  }catch(pqxx::check_violation &e){
+    return "Symbol amount cannot be negative";
   }
   return "success";
 }
