@@ -29,8 +29,14 @@ int main (int argc, char *argv[])
   cout<<msg3<<endl;
 
   string msg4=db.createOrder("abc",50,100,0);
-  cout<<"id 5"<<msg4<<endl;
+  cout<<"id 5 "<<msg4<<endl;
 
+
+  vector<string> v=db.queryOrder(0);
+  for(vector<string>::iterator i=v.begin();i!=v.end();++i){
+    cout<<*i<<endl;
+  }
+  
   db.disconnect();
 
   return 0;
