@@ -33,4 +33,5 @@ class Database{
     void minusSellAmount(string name,double amount,int account_id);
     void minusBuyBalance(double amount, double price,int account_id);
     vector<string> queryOrder(int trans_id);
+    vector<string> cancelOrder(int trans_id);
 };

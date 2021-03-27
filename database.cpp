@@ -221,7 +221,15 @@ vector<string> Database::queryOrder(int trans_id){
         ss<<"executed shares="<<row[2].c_str()<<" price="<<row[3].c_str()<<" time="<<row[8];
         v.push_back(ss.str());
       }
-    }
- 
+  }
   return v;
 }
+
+vector<string> Database::cancelOrder(int trans_id){
+  stringstream ss;
+  ss<<"UPDATE ORDERS SET STATUS='canceled', TIME=CURRENT_TIMESTAMP WHERE TRANS_ID="<<trans_id<<" AND STATUS='open';\n";
+  executeSql(ss.str());
+  return queryOrder(trans_id);
+}
+
+
