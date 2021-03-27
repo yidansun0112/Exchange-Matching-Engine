@@ -1,5 +1,5 @@
 CC=g++
-CFLAGS=-O3
+CFLAGS=-ggdb
 EXTRAFLAGS=-lpqxx -lpq
 
 all: server

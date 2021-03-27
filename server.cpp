@@ -17,22 +17,22 @@ int main (int argc, char *argv[])
   }
 
   db.createTables();
-  string msg=db.createAccount(0,-100);
-  cout<<msg<<endl;
-  db.createAccount(0,100);
+  string msg=db.createAccount(0,1000);
+  cout<<msg<<"create account id 0, balance 1000"<<endl;
+  db.createAccount(1,1000);
+  cout<<"create account id 1, balance 1000"<<endl;
   string msg1=db.createSymbol("abc",0,100);
-  cout<<msg1<<endl;
-  string msg2=db.createSymbol("abc",0,-100);
-  cout<<msg2<<endl;
+  cout<<msg1<<"create abc 100 for id 0"<<endl;
 
-  string msg3=db.createOrder("abc",-50,100,0);
-  cout<<msg3<<endl;
 
-  string msg4=db.createOrder("abc",50,100,0);
-  cout<<"id 5 "<<msg4<<endl;
+   string msg4=db.createOrder("abc",30,15,1);
+  cout<<"id 1 buy 30 abc at $15"<<endl;
 
   
-  vector<string> v=db.cancelOrder(0);
+  string msg3=db.createOrder("abc",-50,10,0);
+  cout<<"id 0 sell 50 abc at $10"<<endl;
+  
+  vector<string> v=db.cancelOrder(1);
   for(vector<string>::iterator i=v.begin();i!=v.end();++i){
     cout<<*i<<endl;
   }

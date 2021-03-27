@@ -140,20 +140,19 @@ string Database::createOrder(string name,double amount,double price, int account
   double amt=amount>0?amount:-amount;
   ss<<W.quote(name)<<","<<amt<<","<<price<<",";
   W.commit();
+  long time=getCurrTime();
   try{
     if(amount<0){
       ss<<"'sell'"<<",";
-      amount=-amount;
-      minusSellAmount(name,amount,account_id);
+      minusSellAmount(name,-amount,account_id);
     }else if(amount>0){
       ss<<"'buy'"<<",";
       minusBuyBalance(amount,price,account_id);
     }else{
       return "Order amount cannot be zero";
     }
-    ss<<"'open'"<<","<<account_id<<","<<trans_id<<","<<getCurrTime()<<");\n";
+    ss<<"'open'"<<","<<account_id<<","<<trans_id<<","<<time<<");\n";
     string command=ss.str();
-    cout<<command;
     executeSql(command);
   }catch(pqxx::foreign_key_violation &e){
     return "This id does not exist in Account";
@@ -166,6 +165,13 @@ string Database::createOrder(string name,double amount,double price, int account
   }catch (MyException &e){
     return e.what();
   }
+  
+  if(amount<0){
+    matchSellOrder(name, -amount, price, account_id, time, trans_id);
+  }else{
+    matchBuyOrder(name, amount, price, account_id, time, trans_id);
+  }
+
   stringstream sss;
   sss<<"success id is "<<trans_id;
   trans_id++;
@@ -241,6 +247,7 @@ void Database::matchSellOrder(string name, double amount, double price, int acco
   ss<<"ORDER BY PRICE DESC, TIME;\n";
   work W(*C);
   result r=W.exec(ss.str());
+  W.commit();
   int num_row=r.size();
   int i=0;
   while(amount>0&&i<num_row){
@@ -251,6 +258,8 @@ void Database::matchSellOrder(string name, double amount, double price, int acco
     double buy_price=row[3].as<double>();
     long buy_time=row[8].as<long>();
     double execPrice=price;
+    cout<<"buy time is"<<buy_time<<endl;
+    cout<<"sell time is"<<time<<endl;
     if(buy_time<time){
       execPrice=buy_price;
     }
@@ -283,7 +292,7 @@ void Database::addNewLine(int trans_id, double price,double amount,string name, 
   executeSql(s1.str());
   stringstream s2;
   s2<<"INSERT INTO ORDERS (SYM,AMOUNT,PRICE,TYPE,STATUS,ACCOUNT_ID,TRANS_ID,TIME) VALUES(";
-  s2<<"'"<<name<<"',"<<amount<<","<<price<<","<<type<<","<<"'executed',"<<account_id<<","<<trans_id<<","<<getCurrTime()<<";\n";
+  s2<<"'"<<name<<"',"<<amount<<","<<price<<","<<type<<","<<"'executed',"<<account_id<<","<<trans_id<<","<<getCurrTime()<<");\n";
   executeSql(s2.str());
 }
 
