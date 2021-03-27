@@ -1,1 +1,1 @@
-transactions 12345 order abc 123 456 
+transactions 12345 query 345 cancel 1234578 order abc 123 456 query 34567

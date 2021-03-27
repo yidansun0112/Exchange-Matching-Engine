@@ -138,7 +138,7 @@ std::vector<std::string> xmlParser::parseCreateXML(){
 
 std::vector<std::string> xmlParser::parseTransactionsXML(){
   std::vector<std::string> ans;
-  ans.push_back("transactions id"); 
+  ans.push_back("transaction id"); 
   std::string value;
   value = this->getParentAttribute("transactions", "id");
   ans.push_back(value);
@@ -157,7 +157,7 @@ std::vector<std::string> xmlParser::parseTransactionsXML(){
     ans.push_back(value);
   }
   for (int i = 0; i < this->getChildCount("transactions", 0, "cancel"); i++) {
-    ans.push_back("newQuery");
+    ans.push_back("newCancel");
     value = this->getChildAttribute("transactions", 0, "cancel", i, "id");
     ans.push_back(value);
   }
