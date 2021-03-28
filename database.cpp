@@ -286,6 +286,17 @@ void Database::matchBuyOrder(string name, double amount, double price, int accou
 }
 
 
+void Database::addBuyAmount(string name,int owner, double amount){
+  createSymbol(name,owner,amount);
+}
+
+void Database::addSellBalance(double amount, double price, int account_id){
+  stringstream ss;
+  double income=amount*price;
+  ss<<"UPDATE ACCOUNT SET BALANCE=BALANCE+"<<income<<"WHERE ID="<<account_id<<";\n";
+  executeSql(ss.str());
+}
+
 void Database::addNewLine(int trans_id, double price,double amount,string name, int account_id, string type){
   stringstream s1;
   s1<<"UPDATE ORDERS SET AMOUNT=ORDERS.AMOUNT-"<<amount<<" WHERE TRANS_ID="<<trans_id<<" AND STATUS='open';\n";

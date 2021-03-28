@@ -36,7 +36,9 @@ class Database{
     vector<string> cancelOrder(int trans_id);
     void matchSellOrder(string name, double amount, double price, int account_id,long time, int trans_id);
     void matchBuyOrder(string name, double amount, double price, int account_id,long time, int trans_id);
-  void addNewLine(int trans_id, double price,double amount,string name,int account_id,string type);
+    void addNewLine(int trans_id, double price,double amount,string name,int account_id,string type);
     void changeStatus(int trans_id, double price);
     long getCurrTime();
+    void addBuyAmount(string name,int owner, double amount);
+    
 };
