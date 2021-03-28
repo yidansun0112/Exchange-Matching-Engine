@@ -32,8 +32,8 @@ class Database{
     string createOrder(string name,double amount,double price, int account_id);
     void minusSellAmount(string name,double amount,int account_id);
     void minusBuyBalance(double amount, double price,int account_id);
-    vector<string> queryOrder(int trans_id);
-    vector<string> cancelOrder(int trans_id);
+    vector<string> queryOrder(int trans_id, int account_id);
+    vector<string> cancelOrder(int trans_id, int account_id);
     void matchSellOrder(string name, double amount, double price, int account_id,int trans_id);
     void matchBuyOrder(string name, double amount, double price, int account_id,int trans_id);
     void addNewLine(int trans_id, double price,double amount,string name,int account_id,string type);

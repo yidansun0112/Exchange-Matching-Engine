@@ -26,7 +26,7 @@ int main (int argc, char *argv[])
 
   db.createOrder("abc",10,20,0);
   db.createOrder("abc",30,30,0);
-  db.cancelOrder(1);
+  db.cancelOrder(1,0);
   
  
   

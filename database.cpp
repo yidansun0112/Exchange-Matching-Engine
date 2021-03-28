@@ -204,10 +204,10 @@ void Database::minusBuyBalance(double amount, double price,int account_id){
   executeSql(ss.str());
 }
 
-vector<string> Database::queryOrder(int trans_id){
+vector<string> Database::queryOrder(int trans_id, int account_id){
   stringstream ss;
   vector<string> v;
-  ss<<"SELECT * FROM ORDERS WHERE TRANS_ID="<<trans_id<<";\n";
+  ss<<"SELECT * FROM ORDERS WHERE TRANS_ID="<<trans_id<<" AND ACCOUNT_ID="<<account_id<<";\n";
   work W(*C);
   result r=W.exec(ss.str());
   W.commit();
@@ -234,9 +234,9 @@ vector<string> Database::queryOrder(int trans_id){
   return v;
 }
 
-vector<string> Database::cancelOrder(int trans_id){
+vector<string> Database::cancelOrder(int trans_id, int account_id){
   stringstream s1;
-  s1<<"SELECT * FROM ORDERS WHERE TRANS_ID="<<trans_id<<" AND STATUS='open';\n";
+  s1<<"SELECT * FROM ORDERS WHERE TRANS_ID="<<trans_id<<" AND ACCOUNT_ID="<<account_id<<" AND STATUS='open';\n";
   work W(*C);
   result r=W.exec(s1.str());
   W.commit();
@@ -254,9 +254,9 @@ vector<string> Database::cancelOrder(int trans_id){
     }
   }
   stringstream ss;
-  ss<<"UPDATE ORDERS SET STATUS='canceled', TIME="<<getCurrTime()<<" WHERE TRANS_ID="<<trans_id<<" AND STATUS='open';\n";
+  ss<<"UPDATE ORDERS SET STATUS='canceled', TIME="<<getCurrTime()<<" WHERE TRANS_ID="<<trans_id<<" AND ACCOUNT_ID="<<account_id<<" AND STATUS='open';\n";
   executeSql(ss.str());
-  return queryOrder(trans_id);
+  return queryOrder(trans_id, account_id);
 }
 
 void Database::matchSellOrder(string name, double amount, double price, int account_id, int trans_id){
