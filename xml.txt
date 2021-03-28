@@ -1,0 +1,1 @@
+create user 12345 100 symbol SYM 12345 100
