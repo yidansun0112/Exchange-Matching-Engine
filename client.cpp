@@ -8,7 +8,7 @@ void Client::buildConnection(){
   hints.ai_socktype = SOCK_STREAM;
 
   // connect my ip
-  if ((rv = getaddrinfo("vcm-18615.vm.duke.edu", port_num, &hints, &servinfo)) != 0) {
+  if ((rv = getaddrinfo(hostname, port_num, &hints, &servinfo)) != 0) {
     fprintf(stderr, "getaddrinfo: %s\n", gai_strerror(rv));
   }
   if ((server_fd = socket(servinfo->ai_family, servinfo->ai_socktype,
@@ -26,6 +26,9 @@ void Client::buildConnection(){
   freeaddrinfo(servinfo); 
 }
 
+void Client::sendString(string message){
+  send(server_fd,message.data(),message.size()+1,0);
+}
 
 void Client::run(){
   //buildConnection();

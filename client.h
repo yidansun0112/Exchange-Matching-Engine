@@ -11,17 +11,22 @@
 #include <fstream>
 #include <vector>
 #include <sstream>
+#include <string>
+
+using namespace std;
 
 
 class Client{
 private:
+  const char* hostname;
   const char* port_num;
   int server_fd;
   std::vector<std::string> requestXMLs;
   void sendRequest(int server_fd);
   void buildConnection();
 public:
-  Client():port_num("12345"){};
+  Client(const char * host):hostname(host),port_num("12345"){};
+  void sendString(string message);
   void run();
 };
 

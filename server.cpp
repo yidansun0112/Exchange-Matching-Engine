@@ -45,6 +45,10 @@ void Server::run(){
   }
 }
 
+void Server::sendString(int client_fd,string message){
+  send(client_fd,message.data(),message.size()+1,0);
+}
+
 void Server::handleRequest(int client_fd){
   db.openDatabase();
   char buf[65535];
