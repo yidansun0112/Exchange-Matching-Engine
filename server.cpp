@@ -57,7 +57,6 @@ void Server::handleRequest(int client_fd){
 }
 
 std::string Server::executeParserResult(std::vector<std::string> input) {
-  
   if (input.size() == 0) {
     std::string ans;
     return ans;
