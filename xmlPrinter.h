@@ -20,5 +20,10 @@ private:
   std::string createHeader();
 public:
   std::string createRequestXML(std::string input);
-  std::string createResponseXML();
+  std::string createCreateAccountXML(int userId, std::string msg);
+  std::string createCreateSymbolXML(std::string symbol, int userId, std::string msg);
+  std::string createOrderXML(std::string symbol, int amount, double limit, int transId, std::string msg);
+  std::string createQueryXML(int transId,std::vector<std::string> msg);
+  std::string createCancelXML(int transId, std::vector<std::string> msg);
+  
 };

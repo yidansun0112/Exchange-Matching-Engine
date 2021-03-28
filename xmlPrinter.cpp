@@ -92,7 +92,102 @@ std::string xmlPrinter::getTransactionXML(std::vector<std::string> tokens) {
   return ans;
 }
 
-std::string xmlPrinter::createResponseXML() {
+std::string xmlPrinter::createCreateAccountXML(int userId, std::string msg) {
   std::string ans;
+  std::string idString = std::to_string(userId);
+  if (msg == "success") {
+    ans += "<created id=\"";
+    ans += idString;
+    ans += "\"/>\n";
+  } else {
+    ans+="<error id=\"";
+    ans += idString;
+    ans += "\">";
+    ans += msg;
+    ans += "</error>\n";
+  }
   return ans;
 }
+std::string xmlPrinter::createCreateSymbolXML(std::string symbol, int userId, std::string msg) {
+  std::string ans;
+  std::string idString = std::to_string(userId);
+  if (msg == "success") {
+    ans += "  <created sym=\"";
+    ans += symbol;
+    ans += "\" id=\"";
+    ans += idString;
+    ans +="\"/>\n";
+  } else {
+    ans += "  <error sym=\"";
+    ans += symbol;
+    ans += "\" id=\"";
+    ans += idString;
+    ans += "\">";
+    ans += msg;
+    ans += "</error>";
+  }
+  return ans;
+}
+
+std::string xmlPrinter::createOrderXML(std::string symbol, int amount, double limit, int transId, std::string msg) {
+  std::string ans;
+  std::string aString = std::to_string(amount);
+  std::string lString = std::to_string(limit);
+  std::string idString = std::to_string(transId);
+  if (msg.substr(0, 6) == "success"){
+    std::string idString = msg.substr(14);
+    ans += "  <opened sym=\"";
+    ans += symbol;
+    ans += " amount=\"";
+    ans += aString;
+    ans += " limit=\"";
+    ans += lString;
+    ans += "\" id=\">";
+    ans += idString;
+    ans += "\"/>\n";
+  } else {
+    ans += "  <error sym=\"";
+    ans += symbol;
+    ans += " amount=\"";
+    ans += aString;
+    ans += " limit=\"";
+    ans += lString;
+    ans += "\">";
+    ans += msg;
+    ans += "</error>\n";
+  }
+  return ans;
+}
+std::string xmlPrinter::createQueryXML(int transId,std::vector<std::string> msg) {
+  std::string ans;
+  std::string idString = std::to_string(transId);
+  ans += "  <status id=";
+  ans += idString;
+  ans += "\">\n";
+  for (size_t i = 0; i < msg.size(); i++) {
+    ans += "    <";
+    ans += msg[i];
+    ans += "/>\n";
+    }
+  ans += "  </status>\n";
+  return ans;
+}
+
+std::string xmlPrinter::createCancelXML(int transId, std::vector<std::string> msg) {
+  std::string ans;
+  std::string idString = std::to_string(transId);
+  ans += "  <canceled id=TRANS_ID>\n";
+  ans += "  </canceled>\n";
+  ans += "  <canceled id=";
+  ans += idString;
+  ans += "\">\n";
+  for (size_t i = 0; i < msg.size(); i++) {
+    ans += "    <";
+    ans += msg[i];
+    ans += "/>\n";
+  }
+  ans += "  </status>\n";
+    
+  return ans;
+}
+ 
