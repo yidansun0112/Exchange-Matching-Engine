@@ -42,6 +42,7 @@ void Server::run(){
       continue;
     }
     handleRequest(client_fd);
+    cout<<"waiting for next connect"<<endl;
   }
 }
 
@@ -51,17 +52,29 @@ void Server::sendString(int client_fd,string message){
 
 void Server::handleRequest(int client_fd){
   db.openDatabase();
-  char message[65535];
+  // vector<string> v;
+  int num=0;
   while(1){
-    if(recv(client_fd,message,sizeof(message),0)<=0){
-      break;
-    }
+    char message[65535]={0};
+    recv(client_fd,message,sizeof(message),0);
     string xml(message);
+    cout<<xml<<endl;
+    if(xml=="end"){
+      cout<<"equals"<<endl;
+      return;
+    }
     xmlParser parser(xml);
     vector<string> result=parser.parseXML();
     string response=executeParserResult(result);
     sendString(client_fd,response);
+    //v.push_back(response);
+    num++;
   }
+  //cout<<"start send"<<endl;
+  //int size=v.size();
+  //for(int i=0;i<size;i++){
+  //sendString(client_fd,v[i]);
+  //}
 }
 
 std::string Server::executeParserResult(std::vector<std::string> input) {

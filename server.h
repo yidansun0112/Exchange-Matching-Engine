@@ -35,7 +35,7 @@ public:
     db.createTables();
     //db.disconnect();
   };
-  void executeParserResult(std::vector<std::string> input);
+  std::string executeParserResult(std::vector<std::string> input);
   void sendString(int client_fd,string message);
   void run();
 };

@@ -1,4 +1,4 @@
-CFLAGS=-Wall -Werror -pedantic -ggdb3
+CFLAGS=-Wall -pedantic -ggdb3
 LDFLAGS= -L/usr/local/lib -Wl,-rpath,/usr/local/lib -lxerces-c -lpqxx -lpq
 PROGS=server client
 OBJS=$(patsubst %,%.o,$(PROGS)) database.o server.o xmlParser.o xmlPrinter.o client.o

@@ -1,8 +1,8 @@
 #include "client.h"
 void Client::buildConnection(){
-  struct addrinfo hints, *servinfo, *ai;
+  struct addrinfo hints, *servinfo;
   int rv;
-  int yes = 1;
+  //int yes = 1;
   memset(&hints, 0, sizeof hints);
   hints.ai_family = AF_UNSPEC;
   hints.ai_socktype = SOCK_STREAM;
@@ -33,31 +33,40 @@ void Client::sendString(string message){
 void Client::run(){
   buildConnection();
   sendRequest();
-  recvResponse();
+  // recvResponse();
+  close(server_fd);
 }
 
 void Client::sendRequest (){
-  xmlPinter printer;
+  xmlPrinter printer;
   std::ifstream newfile ("xml.txt");
   if (newfile.is_open()){   //checking whether the file is open
     std::string tp;
     while(getline(newfile, tp)){
       //std::cout<<printer.createRequestXML(tp);
       string request=printer.createRequestXML(tp);
+      //cout<<request<<endl;
       sendString(request);
+      recvResponse();
     }
     newfile.close(); //close the file object.
   }
+  sendString("end");
 }
 
 void Client::recvResponse(){
-  while(1){
-    char message[65536]={0};
-    if(recv(server_fd,message,sizeof(message),0)<=0){
-      break;
-    }
-    cout<<message<<endl;
-  }
+  //int num=0;
+  //while(num<9){
+  //char message[65536]={0};
+  //if(recv(server_fd,message,sizeof(message),0)<0){
+  //break;
+  //}
+  //cout<<message<<endl;
+  // num++;
+  //}
+  char message[65536]={0};
+  recv(server_fd,message,sizeof(message),0);
+  cout<<message<<endl;
 }
 
 int main(int argc, char **argv){
@@ -66,7 +75,7 @@ int main(int argc, char **argv){
     exit(EXIT_FAILURE);
   }
   const char * hostname=argv[1];
-  Client client(hostname,"12345");
+  Client client(hostname);
   client.run();
   return 0;
 }
