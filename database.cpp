@@ -234,7 +234,25 @@ vector<string> Database::queryOrder(int trans_id){
   return v;
 }
 
-vector<string> Database::cancelOrder(int trans_id{
+vector<string> Database::cancelOrder(int trans_id){
+  stringstream s1;
+  s1<<"SELECT * FROM ORDERS WHERE TRANS_ID="<<trans_id<<" AND STATUS='open';\n";
+  work W(*C);
+  result r=W.exec(s1.str());
+  W.commit();
+  if(r.size()!=0){
+    pqxx::row const row=r[0];
+    string type=row[4].as<string>();
+    string name=row[1].as<string>();
+    double amount=row[2].as<double>();
+    double price=row[3].as<double>();
+    int account_id=row[6].as<int>();
+    if(type=="buy"){
+      editBuyBalance(price,0,amount,account_id);
+    }else{
+      createSymbol(name,account_id,amount);
+    }
+  }
   stringstream ss;
   ss<<"UPDATE ORDERS SET STATUS='canceled', TIME="<<getCurrTime()<<" WHERE TRANS_ID="<<trans_id<<" AND STATUS='open';\n";
   executeSql(ss.str());
