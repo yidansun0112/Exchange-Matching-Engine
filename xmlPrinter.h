@@ -19,7 +19,11 @@ private:
   std::string getTransactionXML(std::vector<std::string> tokens);
   std::string createHeader();
 public:
-  std::string createRequestXML(std::string input);
-  std::string createCreateResponseXML(std::string);
-  std::string createTransactionResponseXML(std::string);
+  std::string createRequestXML(int userId, std::string msg);
+  std::string createCreateAccountXML(int userId, std::string msg);
+  std::string createCreateSymbolXML(std::string symbol, int userId, std::string msg);
+  std::string createOrderXML(std::string symbol, int amount, double limit, int transId, std::string msg);
+  std::string createQueryXML(int transId,std::vector<std::string> msg);
+  std::string createCancelXML(int transId, std::vector<std::string> msg);
+  
 };

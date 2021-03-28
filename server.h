@@ -23,8 +23,8 @@ class Server{
   void setUpListener();
   void handleRequest(int client_fd);
   std::string createResponse();
-  void executeTransactionsResult(std::vector<std::string> input);
-  void executeCreateResult(std::vector<std::string> input);
+  std::string executeTransactionsResult(std::vector<std::string> input);
+  std::string executeCreateResult(std::vector<std::string> input);
 public:
   Server() :port_num("12345"){
     try{
@@ -33,9 +33,9 @@ public:
       return;
     }
     db.createTables();
-    db.disconnect();
+    //db.disconnect();
   };
-  void executeParserResult(std::vector<std::string> input);
+  std::string executeParserResult(std::vector<std::string> input);
  
   void run();
 };

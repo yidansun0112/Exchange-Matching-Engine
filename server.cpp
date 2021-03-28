@@ -57,17 +57,20 @@ void Server::handleRequest(int client_fd){
 }
 
 std::string Server::executeParserResult(std::vector<std::string> input) {
+  
   if (input.size() == 0) {
-    return;
+    std::string ans;
+    return ans;
   }
   if (input[0] == "transaction id") {
-    executeTransactionsResult(input);
+    return executeTransactionsResult(input);
   } else {
-    executeCreateResult(input);
+    return executeCreateResult(input);
   }
 }
 
 std::string Server::executeTransactionsResult(std::vector<std::string> input){
+  std::string ans;
   size_t i = 2;
   int transactionId = stoi(input[1]);
   while (i < input.size()) {
@@ -95,9 +98,12 @@ std::string Server::executeTransactionsResult(std::vector<std::string> input){
       }
     }
   }
+  return ans;
+
 }
 
 std::string Server::executeCreateResult(std::vector<std::string> input){
+  std::string ans;
   size_t i = 0;
   while (i < input.size()) {
     if (input[i] == "newUser") {
@@ -115,6 +121,7 @@ std::string Server::executeCreateResult(std::vector<std::string> input){
         std::cout<<db.createSymbol(symbol, id, share);
       }
     }
-  } 
+  }
+  return ans;
 }
 
