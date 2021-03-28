@@ -96,11 +96,11 @@ std::string xmlPrinter::createCreateAccountXML(int userId, std::string msg) {
   std::string ans;
   std::string idString = std::to_string(userId);
   if (msg == "success") {
-    ans += "<created id=\"";
+    ans += "  <created id=\"";
     ans += idString;
     ans += "\"/>\n";
   } else {
-    ans+="<error id=\"";
+    ans+="  <error id=\"";
     ans += idString;
     ans += "\">";
     ans += msg;
@@ -134,23 +134,23 @@ std::string xmlPrinter::createOrderXML(std::string symbol, int amount, double li
   std::string aString = std::to_string(amount);
   std::string lString = std::to_string(limit);
   std::string idString = std::to_string(transId);
-  if (msg.substr(0, 6) == "success"){
+  if (msg.substr(0, 7) == "success"){
     std::string idString = msg.substr(14);
     ans += "  <opened sym=\"";
     ans += symbol;
-    ans += " amount=\"";
+    ans += "\" amount=\"";
     ans += aString;
-    ans += " limit=\"";
+    ans += "\" limit=\"";
     ans += lString;
-    ans += "\" id=\">";
+    ans += "\" id=\"";
     ans += idString;
     ans += "\"/>\n";
   } else {
     ans += "  <error sym=\"";
     ans += symbol;
-    ans += " amount=\"";
+    ans += "\" amount=\"";
     ans += aString;
-    ans += " limit=\"";
+    ans += "\" limit=\"";
     ans += lString;
     ans += "\">";
     ans += msg;
@@ -161,9 +161,12 @@ std::string xmlPrinter::createOrderXML(std::string symbol, int amount, double li
 std::string xmlPrinter::createQueryXML(int transId,std::vector<std::string> msg) {
   std::string ans;
   std::string idString = std::to_string(transId);
-  ans += "  <status id=";
+  ans += "  <status id=\"";
   ans += idString;
   ans += "\">\n";
+  if (msg.size() == 0) {
+      ans += "    <error/>\n";
+  }
   for (size_t i = 0; i < msg.size(); i++) {
     ans += "    <";
     ans += msg[i];
@@ -176,18 +179,19 @@ std::string xmlPrinter::createQueryXML(int transId,std::vector<std::string> msg)
 std::string xmlPrinter::createCancelXML(int transId, std::vector<std::string> msg) {
   std::string ans;
   std::string idString = std::to_string(transId);
-  ans += "  <canceled id=TRANS_ID>\n";
-  ans += "  </canceled>\n";
-  ans += "  <canceled id=";
+  ans += "  <canceled id=\"";
   ans += idString;
   ans += "\">\n";
+  if (msg.size() == 0) {
+      ans += "    <error/>\n";
+  }
+
   for (size_t i = 0; i < msg.size(); i++) {
     ans += "    <";
     ans += msg[i];
     ans += "/>\n";
   }
-  ans += "  </status>\n";
-    
+  ans += "  </canceled>\n";
   return ans;
 }
  

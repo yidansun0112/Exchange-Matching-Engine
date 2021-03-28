@@ -69,7 +69,7 @@ std::string Server::executeParserResult(std::vector<std::string> input) {
 }
 
 std::string Server::executeTransactionsResult(std::vector<std::string> input){
-  std::string ans = "<results>";
+  std::string ans = "<results>\n";
   size_t i = 2;
   int accountId = stoi(input[1]);
   xmlPrinter* printer = new xmlPrinter();
@@ -81,28 +81,27 @@ std::string Server::executeTransactionsResult(std::vector<std::string> input){
       double price = stod(input[i++]);
       std::string msg = db.createOrder(symbol, amount, price, accountId);
       ans += printer->createOrderXML(symbol, amount, price, accountId, msg);
-    }
-    if (input[i] == "newQuery") {
+      continue;
+    } else if (input[i] == "newQuery") {
       i++;
       int trans_id = stoi(input[i++]);
-      std::vector<std::string> msg = db.queryOrder(trans_id);
+      std::vector<std::string> msg = db.queryOrder(trans_id, accountId);
       ans += printer->createQueryXML(trans_id, msg);
-    }
-    if (input[i] == "newCancel") {
+      continue;
+    } else if (input[i] == "newCancel") {
       i++;
       int trans_id = stoi(input[i++]);
-      std::vector<std::string> ans = db.cancelOrder(trans_id);
-      for (size_t i = 0; i < ans.size(); i++) {
-        std::cout<< ans[i] <<std::endl;
-      }
+      std::vector<std::string> msg = db.cancelOrder(trans_id, accountId);
+      ans += printer->createCancelXML(trans_id, msg);
+      continue;
     }
   }
+  ans += "</results>\n";
   return ans;
-
 }
 
 std::string Server::executeCreateResult(std::vector<std::string> input){
-  std::string ans;
+  std::string ans = "<results>\n";
   size_t i = 0;
   xmlPrinter* printer = new xmlPrinter();
   while (i < input.size()) {
@@ -110,7 +109,8 @@ std::string Server::executeCreateResult(std::vector<std::string> input){
       i++;
       int id = stoi(input[i++]);
       double balance = stod(input[i++]);
-      std::cout<<db.createAccount(id, balance)<<std::endl;
+      std::string msg = db.createAccount(id, balance);
+      ans += printer->createCreateAccountXML(id, msg);
     }
     if (input[i] == "newSymbol") {
       i++;
@@ -118,10 +118,12 @@ std::string Server::executeCreateResult(std::vector<std::string> input){
       while (i < input.size() && input[i]!= "newSymbol") {
         int id = stoi(input[i++]);
         int share = stoi(input[i++]);
-        std::cout<<db.createSymbol(symbol, id, share);
+        std::string msg = db.createSymbol(symbol, id, share);
+        ans += printer->createCreateSymbolXML(symbol,id, msg);
       }
     }
   }
+  ans += "</results>";
   return ans;
 }
 
