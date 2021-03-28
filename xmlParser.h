@@ -32,10 +32,11 @@ private:
   std::string getParentAttribute(const char* parentTag, const char* attributeTag);
   DOMDocument* m_doc;
   void createParser();
-
+ 
 public:
   std::vector<std::string> parseXML();
   std::string getRoot(); // here for test
+  xmlParser(){};
   xmlParser(std::string inputXML);
   ~xmlParser(){
     if (m_doc) {

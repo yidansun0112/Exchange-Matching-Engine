@@ -142,25 +142,50 @@ std::vector<std::string> xmlParser::parseTransactionsXML(){
   std::string value;
   value = this->getParentAttribute("transactions", "id");
   ans.push_back(value);
-  for (int i = 0; i < this->getChildCount("transactions", 0, "order"); i++) {
-    ans.push_back("newOrder");
-    value = this->getChildAttribute("transactions", 0, "order", i, "sym");
-    ans.push_back(value);
-    value = this->getChildAttribute("transactions", 0, "order", i, "amount");
-    ans.push_back(value);
-    value = this->getChildAttribute("transactions", 0, "order", i, "limit");
-    ans.push_back(value);
+  DOMElement* elementRoot = m_doc->getDocumentElement();
+  DOMNodeList* children = elementRoot->getChildNodes();
+  const  XMLSize_t nodeCount = children->getLength();
+  XMLCh* tempOrder = XMLString::transcode("order");
+  XMLCh* tempCancel = XMLString::transcode("cancel");
+  XMLCh* tempQuery = XMLString::transcode("query");
+  XMLCh* temp;
+  char* temp2;
+  for (XMLSize_t i = 0; i < nodeCount; i++) {
+    DOMNode* currentNode = children->item(i);
+    if( currentNode->getNodeType() &&  currentNode->getNodeType() == DOMNode::ELEMENT_NODE ) {
+      DOMElement* curr = dynamic_cast<xercesc::DOMElement*> (currentNode);
+      const XMLCh* name = curr->getTagName();
+      if(XMLString::equals(name, tempOrder)) {
+        ans.push_back("newOrder");
+        temp = XMLString::transcode("sym");
+        temp2 = XMLString::transcode(curr->getAttribute(temp));
+        ans.push_back(temp2);
+        temp = XMLString::transcode("amount");
+        temp2 = XMLString::transcode(curr->getAttribute(temp));
+        ans.push_back(temp2);
+        temp = XMLString::transcode("limit");
+        temp2 = XMLString::transcode(curr->getAttribute(temp));
+        ans.push_back(temp2);
+      } else if (XMLString::equals(name, tempQuery)) {
+        ans.push_back("newQuery");
+        temp = XMLString::transcode("id");
+        temp2 = XMLString::transcode(curr->getAttribute(temp));
+        ans.push_back(temp2);
+      } else {
+        ans.push_back("newCancel");
+        temp = XMLString::transcode("id");
+        temp2 = XMLString::transcode(curr->getAttribute(temp));
+        ans.push_back(temp2);
+      }
+    }
   }
-  for (int i = 0; i < this->getChildCount("transactions", 0, "query"); i++) {
-    ans.push_back("newQuery");
-    value = this->getChildAttribute("transactions", 0, "query", i, "id");
-    ans.push_back(value);
-  }
-  for (int i = 0; i < this->getChildCount("transactions", 0, "cancel"); i++) {
-    ans.push_back("newCancel");
-    value = this->getChildAttribute("transactions", 0, "cancel", i, "id");
-    ans.push_back(value);
-  }
-
+  
+  XMLString::release(&tempOrder);
+  XMLString::release(&tempCancel);
+  XMLString::release(&tempQuery);
+  XMLString::release(&temp2);
+  XMLString::release(&temp);
   return ans;
 }
+
+ 

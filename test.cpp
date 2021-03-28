@@ -1,7 +1,12 @@
 #include <cstdio>
-#include "xmlPrinter.h"
 #include "xmlParser.h"
+#include <pqxx/pqxx>
+#include "server.h"
+using namespace pqxx;
+
 int main() {
+  //open database
+  Server* testServer = new Server();
   xmlPrinter printer;
   std::ifstream newfile ("xml.txt");
   if (newfile.is_open()){   //checking whether the file is open
@@ -10,9 +15,7 @@ int main() {
       std::cout<<printer.createRequestXML(tp);
       xmlParser* parser = new xmlParser(printer.createRequestXML(tp));
       std::vector<std::string> result = parser->parseXML();
-      for (size_t i = 0; i < result.size(); i++) {
-        std::cout << result[i] << std::endl;
-      }
+      testServer->executeParserResult(result);
     }
     newfile.close(); //close the file object.
   }

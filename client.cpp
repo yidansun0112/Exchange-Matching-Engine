@@ -17,7 +17,6 @@ void Client::buildConnection(){
     return;
   }
 
-
   if (connect(server_fd, servinfo->ai_addr, servinfo->ai_addrlen) == -1) {
     close(server_fd);
     perror("client: connect");
@@ -26,7 +25,6 @@ void Client::buildConnection(){
 
   freeaddrinfo(servinfo); 
 }
-
 
 
 void Client::run(){

@@ -1,1 +1,1 @@
-transactions 12345 query 345 cancel 1234578 order abc 123 456 query 34567
+create user 12345 100 symbol SYM 12345 100

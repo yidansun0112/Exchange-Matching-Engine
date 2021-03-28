@@ -46,11 +46,75 @@ void Server::run(){
 }
 
 void Server::handleRequest(int client_fd){
+  db.openDatabase();
   char buf[65535];
   int size;
   if ((size = recv(client_fd, buf, sizeof(buf), 0)) == -1) {
     return;
   }
-  std::vector<char> requestXML(buf, buf + size);
-  
+  std::string xml = buf;
+  //xmlParser* reader = new xmlParser(buf); 
 }
+
+void Server::executeParserResult(std::vector<std::string> input) {
+  if (input.size() == 0) {
+    return;
+  }
+  if (input[0] == "transaction id") {
+    executeTransactionsResult(input);
+  } else {
+    executeCreateResult(input);
+  }
+}
+
+void Server::executeTransactionsResult(std::vector<std::string> input){
+  size_t i = 2;
+  int transactionId = stoi(input[1]);
+  while (i < input.size()) {
+    if (input[i] == "newOrder") {
+      i++;
+      std::string symbol = input[i++];
+      double amount = stod(input[i++]);
+      double price = stod(input[i++]);
+      std::cout << db.createOrder(symbol, amount, price, transactionId)<<std::endl;
+    }
+    if (input[i] == "newQuery") {
+      i++;
+      int id = stoi(input[i++]);
+      std::vector<std::string> ans = db.queryOrder(id);
+      for (size_t i = 0; i < ans.size(); i++) {
+        std::cout << ans[i] <<std::endl;
+      }
+    }
+    if (input[i] == "newCancel") {
+      i++;
+      int id = stoi(input[i++]);
+      std::vector<std::string> ans = db.cancelOrder(id);
+      for (size_t i = 0; i < ans.size(); i++) {
+        std::cout<< ans[i] <<std::endl;
+      }
+    }
+  }
+}
+
+void Server::executeCreateResult(std::vector<std::string> input){
+  size_t i = 0;
+  while (i < input.size()) {
+    if (input[i] == "newUser") {
+      i++;
+      int id = stoi(input[i++]);
+      double balance = stod(input[i++]);
+      std::cout<<db.createAccount(id, balance)<<std::endl;
+    }
+    if (input[i] == "newSymbol") {
+      i++;
+      std::string symbol = input[i++];
+      while (i < input.size() && input[i]!= "newSymbol") {
+        int id = stoi(input[i++]);
+        int share = stoi(input[i++]);
+        std::cout<<db.createSymbol(symbol, id, share);
+      }
+    }
+  } 
+}
+
