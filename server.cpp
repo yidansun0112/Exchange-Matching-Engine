@@ -24,10 +24,10 @@ int main (int argc, char *argv[])
   string msg1=db.createSymbol("abc",0,100);
   cout<<msg1<<"create abc 100 for id 0"<<endl;
 
-  db.createOrder("abc",-10,20,1);
-  db.createOrder("abc",-30,30,1);
-  db.createOrder("abc",-20,15,1);
-  db.createOrder("abc",40,20,0);
+  db.createOrder("abc",-10,20,0);
+  db.createOrder("abc",-30,30,0);
+  db.createOrder("abc",-20,15,0);
+  db.createOrder("abc",40,20,1);
   
  
   

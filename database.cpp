@@ -234,7 +234,7 @@ vector<string> Database::queryOrder(int trans_id){
   return v;
 }
 
-vector<string> Database::cancelOrder(int trans_id){
+vector<string> Database::cancelOrder(int trans_id{
   stringstream ss;
   ss<<"UPDATE ORDERS SET STATUS='canceled', TIME="<<getCurrTime()<<" WHERE TRANS_ID="<<trans_id<<" AND STATUS='open';\n";
   executeSql(ss.str());
