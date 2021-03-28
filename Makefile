@@ -2,13 +2,13 @@ CC=g++
 CFLAGS=-ggdb
 EXTRAFLAGS=-lpqxx -lpq
 
-all: server
+all: dbtest
 
-server: server.cpp database.cpp
-				$(CC) $(CFLAGS) -o server server.cpp database.cpp $(EXTRAFLAGS)
+dbtest: dbtest.cpp database.cpp
+				$(CC) $(CFLAGS) -o dbtest dbtest.cpp database.cpp $(EXTRAFLAGS)
 
 clean:
-				rm -f *~ *.o server
+				rm -f *~ *.o dbtest
 
 clobber:
 				rm -f *~ *.o
