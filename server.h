@@ -21,7 +21,7 @@ class Server{
   std::vector<std::string> requestXMLs;
   std::vector<char> responseXMLs;
   void setUpListener();
-  void handleRequest(int client_fd);
+  static void * handleRequest(void * info);
   std::string createResponse();
   std::string executeTransactionsResult(std::vector<std::string> input);
   std::string executeCreateResult(std::vector<std::string> input);

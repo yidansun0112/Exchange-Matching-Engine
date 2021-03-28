@@ -1,5 +1,5 @@
 CFLAGS=-Wall -pedantic -ggdb3
-LDFLAGS= -L/usr/local/lib -Wl,-rpath,/usr/local/lib -lxerces-c -lpqxx -lpq
+LDFLAGS= -L/usr/local/lib -Wl,-rpath,/usr/local/lib -lxerces-c -lpqxx -lpq -lpthread
 PROGS=server client
 OBJS=$(patsubst %,%.o,$(PROGS)) database.o server.o xmlParser.o xmlPrinter.o client.o
 all:$(PROGS) 

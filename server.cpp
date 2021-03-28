@@ -34,15 +34,20 @@ void Server::setUpListener(){
 void Server::run(){
   setUpListener();
   while(1) {
-    int client_fd;
-    struct sockaddr_storage socket_addr;
-    std::string ip;
-    socklen_t socket_addr_len = sizeof(socket_addr);
-    if (( client_fd = accept(listener, (struct sockaddr *)&socket_addr, &socket_addr_len)) == -1) {
-      continue;
+    try{
+      int client_fd;
+      struct sockaddr_storage socket_addr;
+      std::string ip;
+      socklen_t socket_addr_len = sizeof(socket_addr);
+      if (( client_fd = accept(listener, (struct sockaddr *)&socket_addr, &socket_addr_len)) == -1) {
+        continue;
+      }
+      pthread_t thread;
+      pthread_create(&thread,NULL,handleRequest,&client_fd);
+      cout<<"waiting for next connect"<<endl;
+    }catch(exception &e){
+      cerr<<e.what()<<endl;
     }
-    handleRequest(client_fd);
-    cout<<"waiting for next connect"<<endl;
   }
 }
 
@@ -50,23 +55,26 @@ void Server::sendString(int client_fd,string message){
   send(client_fd,message.data(),message.size()+1,0);
 }
 
-void Server::handleRequest(int client_fd){
+void * Server::handleRequest(void * info){
+  Database db;
+  Server server;
   db.openDatabase();
   // vector<string> v;
+  int *client_fd=(int*)info;
   int num=0;
   while(1){
     char message[65535]={0};
-    recv(client_fd,message,sizeof(message),0);
+    recv(*client_fd,message,sizeof(message),0);
     string xml(message);
     cout<<xml<<endl;
     if(xml=="end"){
       cout<<"equals"<<endl;
-      return;
+      return NULL;
     }
     xmlParser parser(xml);
     vector<string> result=parser.parseXML();
-    string response=executeParserResult(result);
-    sendString(client_fd,response);
+    string response=server.executeParserResult(result);
+    server.sendString(*client_fd,response);
     //v.push_back(response);
     num++;
   }
