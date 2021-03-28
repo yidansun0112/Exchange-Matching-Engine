@@ -92,7 +92,13 @@ std::string xmlPrinter::getTransactionXML(std::vector<std::string> tokens) {
   return ans;
 }
 
-std::string xmlPrinter::createResponseXML() {
+std::string xmlPrinter::createCreateResponseXML(std::string input) {
+  std::string ans;
+  
+  return ans;
+}
+
+std::string createTransactionResponseXML(std::string) {
   std::string ans;
   return ans;
 }
