@@ -20,5 +20,6 @@ private:
   std::string createHeader();
 public:
   std::string createRequestXML(std::string input);
-  std::string createResponseXML();
+  std::string createCreateResponseXML(std::string);
+  std::string createTransactionResponseXML(std::string);
 };
