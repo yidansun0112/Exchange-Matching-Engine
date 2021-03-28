@@ -112,13 +112,13 @@ std::string xmlPrinter::createCreateSymbolXML(std::string symbol, int userId, st
   std::string ans;
   std::string idString = std::to_string(userId);
   if (msg == "success") {
-    ans += "<created sym=\"";
+    ans += "  <created sym=\"";
     ans += symbol;
     ans += "\" id=\"";
     ans += idString;
     ans +="\"/>\n";
   } else {
-    ans += "<error sym=\"";
+    ans += "  <error sym=\"";
     ans += symbol;
     ans += "\" id=\"";
     ans += idString;
@@ -136,7 +136,7 @@ std::string xmlPrinter::createOrderXML(std::string symbol, int amount, double li
   std::string idString = std::to_string(transId);
   if (msg.substr(0, 6) == "success"){
     std::string idString = msg.substr(14);
-    ans += "<opened sym=\"";
+    ans += "  <opened sym=\"";
     ans += symbol;
     ans += " amount=\"";
     ans += aString;
@@ -146,7 +146,7 @@ std::string xmlPrinter::createOrderXML(std::string symbol, int amount, double li
     ans += idString;
     ans += "\"/>\n";
   } else {
-    ans += "<error sym=\"";
+    ans += "  <error sym=\"";
     ans += symbol;
     ans += " amount=\"";
     ans += aString;
@@ -159,9 +159,35 @@ std::string xmlPrinter::createOrderXML(std::string symbol, int amount, double li
   return ans;
 }
 std::string xmlPrinter::createQueryXML(int transId,std::vector<std::string> msg) {
-  
+  std::string ans;
+  std::string idString = std::to_string(transId);
+  ans += "  <status id=";
+  ans += idString;
+  ans += "\">\n";
+  for (size_t i = 0; i < msg.size(); i++) {
+    ans += "    <";
+    ans += msg[i];
+    ans += "/>\n";
+    }
+  ans += "  </status>\n";
+  return ans;
 }
 
 std::string xmlPrinter::createCancelXML(int transId, std::vector<std::string> msg) {
+  std::string ans;
+  std::string idString = std::to_string(transId);
+  ans += "  <canceled id=TRANS_ID>\n";
+  ans += "  </canceled>\n";
+  ans += "  <canceled id=";
+  ans += idString;
+  ans += "\">\n";
+  for (size_t i = 0; i < msg.size(); i++) {
+    ans += "    <";
+    ans += msg[i];
+    ans += "/>\n";
+  }
+  ans += "  </status>\n";
+    
+  return ans;
 }
  
