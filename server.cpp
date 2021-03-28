@@ -51,13 +51,17 @@ void Server::sendString(int client_fd,string message){
 
 void Server::handleRequest(int client_fd){
   db.openDatabase();
-  char buf[65535];
-  int size;
-  if ((size = recv(client_fd, buf, sizeof(buf), 0)) == -1) {
-    return;
+  char message[65535];
+  while(1){
+    if(recv(client_fd,message,sizeof(message),0)<=0){
+      break;
+    }
+    string xml(message);
+    xmlParser parser(xml);
+    vector<string> result=parser.parseXML();
+    string response=executeParserResult(result);
+    sendString(client_fd,response);
   }
-  std::string xml = buf;
-  //xmlParser* reader = new xmlParser(buf); 
 }
 
 std::string Server::executeParserResult(std::vector<std::string> input) {
@@ -131,3 +135,10 @@ std::string Server::executeCreateResult(std::vector<std::string> input){
   return ans;
 }
 
+
+
+int main() {
+  Server server;
+  server.run();
+  return 0;
+}

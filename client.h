@@ -12,6 +12,7 @@
 #include <vector>
 #include <sstream>
 #include <string>
+#include "xmlPrinter.h"
 
 using namespace std;
 
@@ -22,11 +23,12 @@ private:
   const char* port_num;
   int server_fd;
   std::vector<std::string> requestXMLs;
-  void sendRequest(int server_fd);
+  void sendRequest();
+  void sendString(string message);
   void buildConnection();
+  void recvResponse();
 public:
   Client(const char * host):hostname(host),port_num("12345"){};
-  void sendString(string message);
   void run();
 };
 

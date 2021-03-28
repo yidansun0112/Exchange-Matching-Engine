@@ -1,18 +1,20 @@
-CC		= g++ -g
-CFLAGS		= -c -Wall
-LDFLAGS		= -L/usr/local/lib -Wl,-rpath,/usr/local/lib -lxerces-c -lpqxx -lpq
-SOURCES		= test.cpp xmlParser.cpp xmlPrinter.cpp database.cpp server.cpp
-INCLUDES	= 
-OBJECTS		= $(SOURCES:.cpp=.o)
-TARGET		= test
-
-all: $(SOURCES) $(TARGET)
-
-$(TARGET): $(OBJECTS) 
-	$(CC) $(OBJECTS) $(LDFLAGS) -o $@
-
-.cpp.o:
-	$(CC) $(CFLAGS) $(INCLUDES) $< -o $@
-
+CFLAGS=-Wall -Werror -pedantic -ggdb3
+LDFLAGS= -L/usr/local/lib -Wl,-rpath,/usr/local/lib -lxerces-c -lpqxx -lpq
+PROGS=server client
+OBJS=$(patsubst %,%.o,$(PROGS)) database.o server.o xmlParser.o xmlPrinter.o client.o
+all:$(PROGS) 
+server: server.o database.o xmlParser.o xmlPrinter.o
+	g++ -o $@ $^ $(LDFLAGS)
+client: client.o xmlParser.o xmlPrinter.o 
+	g++ -o $@ $^ $(LDFLAGS)
+%.o: %.cpp
+	g++ $(CFLAGS) -c $<
+.PHONY: clean
 clean:
-	rm -rf $(OBJECTS) $(TARGET)
+	rm -f *~ $(PROGS) $(OBJS)
+
+database.o: database.hpp
+server.o: server.h
+xmlParser.o: xmlParser.h
+xmlPrinter.o: xmlPrinter.h
+client.o: client.h

@@ -31,6 +31,42 @@ void Client::sendString(string message){
 }
 
 void Client::run(){
-  //buildConnection();
- 
+  buildConnection();
+  sendRequest();
+  recvResponse();
+}
+
+void Client::sendRequest (){
+  xmlPinter printer;
+  std::ifstream newfile ("xml.txt");
+  if (newfile.is_open()){   //checking whether the file is open
+    std::string tp;
+    while(getline(newfile, tp)){
+      //std::cout<<printer.createRequestXML(tp);
+      string request=printer.createRequestXML(tp);
+      sendString(request);
+    }
+    newfile.close(); //close the file object.
+  }
+}
+
+void Client::recvResponse(){
+  while(1){
+    char message[65536]={0};
+    if(recv(server_fd,message,sizeof(message),0)<=0){
+      break;
+    }
+    cout<<message<<endl;
+  }
+}
+
+int main(int argc, char **argv){
+  if(argc!=2){
+    cerr<<"FORMAT: ./client hostname"<<endl;
+    exit(EXIT_FAILURE);
+  }
+  const char * hostname=argv[1];
+  Client client(hostname,"12345");
+  client.run();
+  return 0;
 }
