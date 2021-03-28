@@ -167,9 +167,9 @@ string Database::createOrder(string name,double amount,double price, int account
   }
   
   if(amount<0){
-    matchSellOrder(name, -amount, price, account_id, time, trans_id);
+    matchSellOrder(name, -amount, price, account_id, trans_id);
   }else{
-    matchBuyOrder(name, amount, price, account_id, time, trans_id);
+    matchBuyOrder(name, amount, price, account_id, trans_id);
   }
 
   stringstream sss;
@@ -258,6 +258,7 @@ void Database::matchSellOrder(string name, double amount, double price, int acco
     double buy_price=row[3].as<double>();
     double execPrice=price;
     double execAmount=amount;
+    cout<<i<<"round"<<"buy price is "<<buy_price<<endl;
     if(buy_transId<trans_id){
       execPrice=buy_price;
     }
@@ -317,9 +318,9 @@ void Database::matchBuyOrder(string name, double amount, double price, int accou
       amount-=sell_amount;
       execAmount=sell_amount;
     }
-    addBuyAmount(name,accountId,execAmount);
+    addBuyAmount(name,account_id,execAmount);
     addSellBalance(execAmount,execPrice,sell_accountId);
-    editBuyBalance(price,execPrice,execAmount,accountId);
+    editBuyBalance(price,execPrice,execAmount,account_id);
     i++;
   }
 }
