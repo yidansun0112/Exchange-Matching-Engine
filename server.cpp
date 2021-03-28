@@ -56,7 +56,7 @@ void Server::handleRequest(int client_fd){
   //xmlParser* reader = new xmlParser(buf); 
 }
 
-void Server::executeParserResult(std::vector<std::string> input) {
+std::string Server::executeParserResult(std::vector<std::string> input) {
   if (input.size() == 0) {
     return;
   }
@@ -67,7 +67,7 @@ void Server::executeParserResult(std::vector<std::string> input) {
   }
 }
 
-void Server::executeTransactionsResult(std::vector<std::string> input){
+std::string Server::executeTransactionsResult(std::vector<std::string> input){
   size_t i = 2;
   int transactionId = stoi(input[1]);
   while (i < input.size()) {
@@ -97,7 +97,7 @@ void Server::executeTransactionsResult(std::vector<std::string> input){
   }
 }
 
-void Server::executeCreateResult(std::vector<std::string> input){
+std::string Server::executeCreateResult(std::vector<std::string> input){
   size_t i = 0;
   while (i < input.size()) {
     if (input[i] == "newUser") {
