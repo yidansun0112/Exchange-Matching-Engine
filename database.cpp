@@ -241,10 +241,10 @@ vector<string> Database::cancelOrder(int trans_id){
   return queryOrder(trans_id);
 }
 
-void Database::matchSellOrder(string name, double amount, double price, int account_id, long time, int trans_id){
+void Database::matchSellOrder(string name, double amount, double price, int account_id, int trans_id){
   stringstream ss;
   ss<<"SELECT * FROM ORDERS WHERE STATUS='open' AND TYPE='buy' AND PRICE>="<<price<<" AND SYM="<<"'"<<name<<"'";
-  ss<<"ORDER BY PRICE DESC, TIME;\n";
+  ss<<"ORDER BY PRICE DESC, TRANS_ID;\n";
   work W(*C);
   result r=W.exec(ss.str());
   W.commit();
@@ -256,11 +256,9 @@ void Database::matchSellOrder(string name, double amount, double price, int acco
     int buy_accountId=row[6].as<int>();
     double buy_amount=row[2].as<double>();
     double buy_price=row[3].as<double>();
-    long buy_time=row[8].as<long>();
     double execPrice=price;
-    cout<<"buy time is"<<buy_time<<endl;
-    cout<<"sell time is"<<time<<endl;
-    if(buy_time<time){
+    double execAmount=amount;
+    if(buy_transId<trans_id){
       execPrice=buy_price;
     }
     if(amount==buy_amount){
@@ -275,14 +273,55 @@ void Database::matchSellOrder(string name, double amount, double price, int acco
       changeStatus(buy_transId,execPrice);
       addNewLine(trans_id, execPrice,buy_amount,name,account_id,"'sell'");
       amount-=buy_amount;
+      execAmount=buy_amount;
     }
+    addBuyAmount(name,buy_accountId,execAmount);
+    addSellBalance(execAmount,execPrice,account_id);
+    editBuyBalance(buy_price,execPrice,execAmount,buy_accountId);
     i++;
   }
 }
 
 
-void Database::matchBuyOrder(string name, double amount, double price, int account_id, long time, int trans_id){
-
+void Database::matchBuyOrder(string name, double amount, double price, int account_id, int trans_id){
+  stringstream ss;
+  ss<<"SELECT * FROM ORDERS WHERE STATUS='open' AND TYPE='sell' AND PRICE<="<<price<<" AND SYM="<<"'"<<name<<"'";
+  ss<<"ORDER BY PRICE, TRANS_ID;\n";
+  work W(*C);
+  result r=W.exec(ss.str());
+  W.commit();
+  int num_row=r.size();
+  int i=0;
+  while(amount>0&&i<num_row){
+    pqxx::row const row=r[i];
+    int sell_transId=row[7].as<int>();
+    int sell_accountId=row[6].as<int>();
+    double sell_amount=row[2].as<double>();
+    double sell_price=row[3].as<double>();
+    double execPrice=price;
+    double execAmount=amount;
+    if(sell_transId<trans_id){
+      execPrice=sell_price;
+    }
+    if(amount==sell_amount){
+      changeStatus(trans_id,execPrice);
+      changeStatus(sell_transId,execPrice);
+      amount=0;
+    }else if(amount<sell_amount){
+      changeStatus(trans_id,execPrice);
+      addNewLine(sell_transId, execPrice,amount,name, sell_accountId,"'sell'");
+      amount=0;
+    }else{
+      changeStatus(sell_transId,execPrice);
+      addNewLine(trans_id, execPrice,sell_amount,name,account_id,"'buy'");
+      amount-=sell_amount;
+      execAmount=sell_amount;
+    }
+    addBuyAmount(name,accountId,execAmount);
+    addSellBalance(execAmount,execPrice,sell_accountId);
+    editBuyBalance(price,execPrice,execAmount,accountId);
+    i++;
+  }
 }
 
 
@@ -316,4 +355,14 @@ void Database::changeStatus(int trans_id, double price){
 long Database::getCurrTime(){
   time_t now=time(NULL);
   return (long)now;
+}
+
+
+void Database::editBuyBalance(double buy_price, double execPrice, double amount, int account_id){
+  if(buy_price!=execPrice){
+    stringstream ss;
+    double toAdd=(buy_price-execPrice)*amount;
+    ss<<"UPDATE ACCOUNT SET BALANCE=BALANCE+"<<toAdd<<" WHERE ID="<<account_id<<";\n";
+    executeSql(ss.str());
+  }
 }
