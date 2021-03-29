@@ -183,7 +183,7 @@ std::string xmlPrinter::createCancelXML(int transId, std::vector<std::string> ms
   ans += idString;
   ans += "\">\n";
   if (msg.size() == 0) {
-      ans += "    <error/>\n";
+      ans += "    <error>This transaction id does not belong to you.</error>\n";
   }
 
   for (size_t i = 0; i < msg.size(); i++) {
