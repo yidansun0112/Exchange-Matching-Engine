@@ -39,7 +39,7 @@ void Client::run(){
 
 void Client::sendRequest (){
   xmlPrinter printer;
-  std::ifstream newfile ("xml.txt");
+  std::ifstream newfile (filename);
   if (newfile.is_open()){   //checking whether the file is open
     std::string tp;
     while(getline(newfile, tp)){
@@ -70,12 +70,13 @@ void Client::recvResponse(){
 }
 
 int main(int argc, char **argv){
-  if(argc!=2){
-    cerr<<"FORMAT: ./client hostname"<<endl;
+  if(argc!=3){
+    cerr<<"FORMAT: ./client hostname filename"<<endl;
     exit(EXIT_FAILURE);
   }
   const char * hostname=argv[1];
-  Client client(hostname);
+  const char * filename=argv[2];
+  Client client(hostname,filename);
   client.run();
   return 0;
 }

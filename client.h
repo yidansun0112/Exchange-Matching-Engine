@@ -21,6 +21,7 @@ class Client{
 private:
   const char* hostname;
   const char* port_num;
+  const char * filename;
   int server_fd;
   std::vector<std::string> requestXMLs;
   void sendRequest();
@@ -28,7 +29,7 @@ private:
   void buildConnection();
   void recvResponse();
 public:
-  Client(const char * host):hostname(host),port_num("12345"){};
+  Client(const char * host, const char * name):hostname(host),port_num("12345"),filename(name){};
   void run();
 };
 
