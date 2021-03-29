@@ -169,8 +169,6 @@ std::string Server::executeCreateResult(std::vector<std::string> input, Database
   return ans;
 }
 
-
-
 int main() {
   Server server;
   server.run();

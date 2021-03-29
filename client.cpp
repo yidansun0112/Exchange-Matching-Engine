@@ -23,6 +23,7 @@ void Client::buildConnection(){
   }
 
   freeaddrinfo(servinfo); 
+  cout<<server_fd<<endl;
 }
 
 void Client::sendString(string message){
@@ -58,13 +59,40 @@ void Client::recvResponse(){
   cout<<message<<endl;
 }
 
+void Client::sendRequest(string str){
+  xmlPrinter printer;
+  string request=printer.createRequestXML(str);
+  sendString(request);
+  cout<<"before"<<endl;
+  recvResponse();
+  cout<<"after"<<endl;
+}
+
 void * oneRound(void * information){
   Thread_info *info=(Thread_info *)information;
   const char * hostname=info->hostname;
   const char * filename=info->filename;
   Client client(hostname,filename);
-  client.run();
+  client.buildConnection();
+  client.sendRequest("transactions 54321 order SYM -2 3");
+  cout<<"send"<<endl;
+  //client.sendRequest("transactions 12345 order SYM 2 3");
+  //client.sendRequest("transactions 54321 order SYM 2 3");
+  //client.sendRequest("transactions 12345 order SYM -2 3");
+  client.sendString("end");
+  //client.closefd();
   return NULL;
+}
+
+void doCancel(const char * hostname,int round){
+  Client client(hostname,"cancel.txt");
+  client.buildConnection();
+  client.sendRequest("transactions 54321 cancel 0");
+  stringstream ss;
+  ss<<"transactions 12345 cancel "<<4*round-1;
+  client.sendRequest(ss.str());
+  client.sendRequest("end");
+  client.closefd();
 }
 
 int main(int argc, char **argv){
@@ -84,13 +112,18 @@ int main(int argc, char **argv){
     client1.run();
     Thread_info info(hostname,filename);
     int i=0;
+    vector<pthread_t> threads;
     while(i<round){
       pthread_t thread;
       pthread_create(&thread,NULL,oneRound,&info);
+      threads.push_back(thread);
       i++;
     }
-    Client client2(hostname,"cancel.txt");
-    client2.run();
+    for(int i=0;i<round;i++){
+      pthread_join(threads[i],NULL);
+      cout<<i<<" end"<<endl;
+    }
+    doCancel(hostname,round);
     return 0;
   }
 }

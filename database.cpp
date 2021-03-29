@@ -1,5 +1,7 @@
 #include "database.hpp"
 
+int Database::trans_id=0;
+
 void Database::openDatabase(){
   C = new connection("dbname=exchange user=postgres password=passw0rd");
   if (C->is_open()) {

@@ -25,12 +25,16 @@ private:
   int server_fd;
   std::vector<std::string> requestXMLs;
   void sendRequest();
-  void sendString(string message);
-  void buildConnection();
   void recvResponse();
 public:
   Client(const char * host, const char * name):hostname(host),port_num("12345"),filename(name){};
   void run();
+  void buildConnection();
+  void sendRequest(string str);
+  void sendString(string message);
+  void closefd(){
+    close(server_fd);
+  }
 };
 
 class Thread_info{

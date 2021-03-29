@@ -1,2 +1,2 @@
-transactions cancel 0
-transactions cancel 399 
+transactions 54321 cancel 0
+transactions 12345 cancel 3999

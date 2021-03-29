@@ -11,11 +11,10 @@ using namespace pqxx;
 class Database{
   private:
     connection *C;
-    int trans_id;
+    static int trans_id;
   public:
     Database(){
       C=NULL;
-      trans_id=0;
     }
     void openDatabase();
     void dropTable();
