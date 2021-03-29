@@ -140,8 +140,8 @@ std::string Server::executeCreateResult(std::vector<std::string> input){
       double balance = stod(input[i++]);
       std::string msg = db.createAccount(id, balance);
       ans += printer->createCreateAccountXML(id, msg);
-    }
-    if (input[i] == "newSymbol") {
+      continue;
+    } else if (input[i] == "newSymbol") {
       i++;
       std::string symbol = input[i++];
       while (i < input.size() && input[i]!= "newSymbol") {
@@ -150,6 +150,7 @@ std::string Server::executeCreateResult(std::vector<std::string> input){
         std::string msg = db.createSymbol(symbol, id, share);
         ans += printer->createCreateSymbolXML(symbol,id, msg);
       }
+      continue;
     }
   }
   ans += "</results>";

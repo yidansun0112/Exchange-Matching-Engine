@@ -124,7 +124,7 @@ std::string xmlPrinter::createCreateSymbolXML(std::string symbol, int userId, st
     ans += idString;
     ans += "\">";
     ans += msg;
-    ans += "</error>";
+    ans += "</error>\n";
   }
   return ans;
 }
