@@ -1,2 +1,8 @@
 #Ignore mac file
 .DS_Store
+
+
+#Ignore compile file
+server
+client
+*.o
