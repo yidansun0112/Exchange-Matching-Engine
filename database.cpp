@@ -78,6 +78,7 @@ void Database::createTables(){
   createTableAccount();
   createTableSymbol();
   createTableOrder();
+  trans_id=0;
 }
 
 void Database::disconnect(){
