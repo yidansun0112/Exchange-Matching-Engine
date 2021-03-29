@@ -33,3 +33,9 @@ public:
   void run();
 };
 
+class Thread_info{
+public:
+    const char * hostname;
+    const char * filename;
+    Thread_info(const char * hostname, const char * filename):hostname(hostname),filename(filename){}
+};
