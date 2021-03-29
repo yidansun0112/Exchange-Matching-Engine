@@ -1,10 +1,6 @@
 #include "xmlParser.h"
 using namespace xercesc;
 
-XercesDOMParser* parser = NULL;
-ErrorHandler* errorHandler = NULL;
-
-
 xmlParser::xmlParser(std::string inputXML):m_doc(NULL) {
   createParser();
   xercesc::MemBufInputSource src((const XMLByte*)inputXML.c_str(), inputXML.length(), "dummy", false);
@@ -17,7 +13,7 @@ void xmlParser::createParser() {
   if (!parser) {
     XMLPlatformUtils::Initialize();
     parser = new XercesDOMParser();
-    errorHandler = (ErrorHandler*) new XmlDomErrorHandler();
+    ErrorHandler* errorHandler = (ErrorHandler*) new XmlDomErrorHandler();
     parser->setErrorHandler(errorHandler);
   }
 }

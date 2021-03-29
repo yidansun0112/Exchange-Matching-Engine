@@ -217,8 +217,7 @@ vector<string> Database::queryOrder(int trans_id, int account_id){
   W.commit();
   int num_rows=r.size();
   cout<<num_rows<<endl;
-  for(int i=0;i<num_rows;i++){
-    pqxx::row const row = r[i];
+  for(result::const_iterator row=r.begin();row!=r.end();++row){
     if(string(row[5].c_str())=="open"){
         stringstream ss;
         ss<<"open shares="<<row[2].c_str();
@@ -245,7 +244,7 @@ vector<string> Database::cancelOrder(int trans_id, int account_id){
   result r=W.exec(s1.str());
   W.commit();
   if(r.size()!=0){
-    pqxx::row const row=r[0];
+    result::const_iterator row=r.begin();
     string type=row[4].as<string>();
     string name=row[1].as<string>();
     double amount=row[2].as<double>();
@@ -273,7 +272,7 @@ void Database::matchSellOrder(string name, double amount, double price, int acco
   int num_row=r.size();
   int i=0;
   while(amount>0&&i<num_row){
-    pqxx::row const row=r[i];
+    result::const_iterator row=r.begin();
     int buy_transId=row[7].as<int>();
     int buy_accountId=row[6].as<int>();
     double buy_amount=row[2].as<double>();
@@ -316,7 +315,7 @@ void Database::matchBuyOrder(string name, double amount, double price, int accou
   int num_row=r.size();
   int i=0;
   while(amount>0&&i<num_row){
-    pqxx::row const row=r[i];
+    result::const_iterator row=r.begin();
     int sell_transId=row[7].as<int>();
     int sell_accountId=row[6].as<int>();
     double sell_amount=row[2].as<double>();

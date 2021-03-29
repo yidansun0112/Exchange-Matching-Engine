@@ -23,6 +23,7 @@ using namespace xercesc;
 
 class xmlParser{
 private:
+  XercesDOMParser* parser;
   std::string getChildValue(const char* parentTag, int parentIndex, const char* childTag, int childIndex);
   std::string getChildAttribute(const char* parentTag, int parentIndex, const char* childTag, int childIndex, const char* attributeTag);
   int getChildCount(const char* parentTag, int parentIndex, const char* childTag);

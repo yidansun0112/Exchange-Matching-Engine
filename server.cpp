@@ -1,5 +1,15 @@
 #include "server.h"
 
+void Server::createTables(){
+  try{
+      Database db;
+      db.openDatabase();
+      db.createTables();
+      db.disconnect();
+   }catch (const exception &e){
+      return;
+   }
+}
 
 void Server::setUpListener(){
   struct addrinfo hints, *ai;
@@ -32,6 +42,7 @@ void Server::setUpListener(){
 }
 
 void Server::run(){
+  createTables();
   setUpListener();
   while(1) {
     try{
@@ -59,45 +70,46 @@ void * Server::handleRequest(void * info){
   Database db;
   Server server;
   db.openDatabase();
-  // vector<string> v;
-  int *client_fd=(int*)info;
-  int num=0;
+  int *client_info=(int*)info;
+  int client_fd=*client_info;
   while(1){
     char message[65535]={0};
-    recv(*client_fd,message,sizeof(message),0);
+    recv(client_fd,message,sizeof(message),0);
     string xml(message);
-    cout<<xml<<endl;
+    //cout<<xml<<endl;
     if(xml=="end"){
-      cout<<"equals"<<endl;
+      cout<<"end"<<endl;
       return NULL;
     }
     xmlParser parser(xml);
     vector<string> result=parser.parseXML();
-    string response=server.executeParserResult(result);
-    server.sendString(*client_fd,response);
-    //v.push_back(response);
-    num++;
+    //stringstream ss;
+    for(size_t i=0;i<result.size();i++){
+      cout<<result[i]<<" ";
+      //ss<<result[i]<<" ";
+    }
+    cout<<endl;
+    //ss<<endl;
+    string response=server.executeParserResult(result,db);
+    server.sendString(client_fd,response);
+    //server.sendString(*client_fd,ss.str());
+    //server.sendString(client_fd,xml);
   }
-  //cout<<"start send"<<endl;
-  //int size=v.size();
-  //for(int i=0;i<size;i++){
-  //sendString(client_fd,v[i]);
-  //}
 }
 
-std::string Server::executeParserResult(std::vector<std::string> input) {
+std::string Server::executeParserResult(std::vector<std::string> input, Database &db) {
   if (input.size() == 0) {
     std::string ans;
     return ans;
   }
   if (input[0] == "transaction id") {
-    return executeTransactionsResult(input);
+    return executeTransactionsResult(input,db);
   } else {
-    return executeCreateResult(input);
+    return executeCreateResult(input,db);
   }
 }
 
-std::string Server::executeTransactionsResult(std::vector<std::string> input){
+std::string Server::executeTransactionsResult(std::vector<std::string> input, Database &db){
   std::string ans = "<results>\n";
   size_t i = 2;
   int accountId = stoi(input[1]);
@@ -129,7 +141,7 @@ std::string Server::executeTransactionsResult(std::vector<std::string> input){
   return ans;
 }
 
-std::string Server::executeCreateResult(std::vector<std::string> input){
+std::string Server::executeCreateResult(std::vector<std::string> input, Database &db){
   std::string ans = "<results>\n";
   size_t i = 0;
   xmlPrinter* printer = new xmlPrinter();
