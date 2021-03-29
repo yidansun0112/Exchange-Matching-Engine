@@ -70,7 +70,6 @@ void * Server::handleRequest(void * info){
   Database db;
   Server server;
   db.openDatabase();
-  // vector<string> v;
   int *client_fd=(int*)info;
   int num=0;
   while(1){
@@ -86,14 +85,8 @@ void * Server::handleRequest(void * info){
     vector<string> result=parser.parseXML();
     string response=server.executeParserResult(result,db);
     server.sendString(*client_fd,response);
-    //v.push_back(response);
     num++;
   }
-  //cout<<"start send"<<endl;
-  //int size=v.size();
-  //for(int i=0;i<size;i++){
-  //sendString(client_fd,v[i]);
-  //}
 }
 
 std::string Server::executeParserResult(std::vector<std::string> input, Database &db) {
