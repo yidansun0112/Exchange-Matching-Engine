@@ -33,7 +33,7 @@ public:
       return;
     }
     db.createTables();
-    //db.disconnect();
+    db.disconnect();
   };
   std::string executeParserResult(std::vector<std::string> input);
   void sendString(int client_fd,string message);
