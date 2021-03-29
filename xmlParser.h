@@ -50,7 +50,7 @@ class XmlDomErrorHandler : public HandlerBase
   public:
     void fatalError(const SAXParseException &exc) {
         printf("Fatal parsing error at line %d\n", (int)exc.getLineNumber());
-        exit(-1);
+        exit(1);
     }
 };
 #endif
