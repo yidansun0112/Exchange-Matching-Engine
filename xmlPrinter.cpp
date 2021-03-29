@@ -2,6 +2,10 @@
 
 std::string xmlPrinter::createRequestXML(std::string input) {
   std::string ans;
+  size_t found = input.find(" //"); 
+  if (found != std::string::npos) {
+    input = input.substr(0, found);
+  }
   std::istringstream buf(input);
   std::istream_iterator<std::string> beg(buf), end;
   std::vector<std::string> tokens(beg, end);

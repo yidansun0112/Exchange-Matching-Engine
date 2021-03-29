@@ -1,6 +1,6 @@
-create user 12345 100 symbol SYM 12345 10
+create user 12345 100 symbol SYM 12345 10 //asdadadsads
 create user 54321 200 symbol ABC 54321 10 12345 10 symbol SYM 12345 10
-transactions 12345 order ABC 2 3 
+transactions 12345 order ABC 2 3 //asdasd
 transactions 12345 query 0 
 transactions 54321 order ABC -2 2
 transactions 12345 query 0 
