@@ -1,0 +1,19 @@
+create user 12345 1000 54321 1000 symbol SYM 12345 100 symbol ABC 54321 10
+create user 34567 100 45678 100
+transactions 123 order ABC 2 10 query 0
+transactions 34567 order ABC -2 10
+transactions 34567 order ABC 2 10
+transactions 34567 query 0
+transactions 34567 order ABC 2 50
+transactions 34567 cancel 0
+transactions 34567 query 0
+transactions 34567 order ABC 2 50
+transactions 34567 cancel 0
+transactions 34567 order ABC 2 60
+transactions 54321 order ABC -1 10
+transactions 54321 order ABC -2 10
+transactions 12345 query 0 query 1 query 2
+transactions 12345 query 3
+transactions 34567 query 0
+transactions 45678 query 1
+transactions 54321 query 3

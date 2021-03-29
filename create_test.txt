@@ -1,0 +1,8 @@
+create user 12345 100 symbol SYM 12345 10
+create symbol SYM 54321 10
+create user 54321 10.3
+create symbol SYM 34567 10
+create symbol SYM 12345 -10
+create user 34567 -100
+create user 54321 20
+create user 34567 10 45678 10
