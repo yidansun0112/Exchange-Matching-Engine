@@ -1530,5 +1530,3221 @@
   <opened sym="SYM" amount="-2" limit="3.000000" id="380"/>
 </results>
 
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="381"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="382"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="383"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="384"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="385"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="386"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="387"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="388"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="389"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="390"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="391"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="392"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="393"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="394"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="395"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="396"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="397"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="398"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="399"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="400"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="401"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="402"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="403"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="404"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="405"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="406"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="407"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="408"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="409"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="410"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="411"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="412"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="413"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="414"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="415"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="416"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="417"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="418"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="419"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="420"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="421"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="422"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="423"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="424"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="425"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="426"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="427"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="428"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="429"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="430"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="431"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="432"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="433"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="434"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="435"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="436"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="437"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="438"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="439"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="440"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="441"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="442"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="443"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="444"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="445"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="446"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="447"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="448"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="449"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="450"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="451"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="452"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="453"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="454"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="455"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="456"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="457"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="458"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="459"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="460"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="461"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="462"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="463"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="464"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="465"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="466"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="467"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="468"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="469"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="470"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="471"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="472"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="473"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="474"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="475"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="476"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="477"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="478"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="479"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="480"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="481"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="482"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="483"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="484"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="485"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="486"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="487"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="488"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="489"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="490"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="491"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="492"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="493"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="494"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="495"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="496"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="497"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="498"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="499"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="500"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="501"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="502"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="503"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="504"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="505"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="506"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="507"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="508"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="509"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="510"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="511"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="512"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="513"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="514"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="515"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="516"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="517"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="518"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="519"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="520"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="521"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="522"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="523"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="524"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="525"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="526"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="527"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="528"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="529"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="530"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="531"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="532"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="533"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="534"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="535"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="536"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="537"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="538"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="539"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="540"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="541"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="542"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="543"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="544"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="545"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="546"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="547"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="548"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="549"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="550"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="551"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="552"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="553"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="554"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="555"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="556"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="557"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="558"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="559"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="560"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="561"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="562"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="563"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="564"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="565"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="566"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="567"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="568"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="569"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="570"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="571"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="572"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="573"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="574"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="575"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="576"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="577"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="578"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="579"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="580"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="581"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="582"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="583"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="584"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="585"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="586"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="587"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="588"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="589"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="590"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="591"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="592"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="593"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="594"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="595"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="596"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="597"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="598"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="599"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="600"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="601"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="602"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="603"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="604"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="605"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="606"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="607"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="608"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="609"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="610"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="611"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="612"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="613"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="614"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="615"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="616"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="617"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="618"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="619"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="620"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="621"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="622"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="623"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="624"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="625"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="626"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="627"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="628"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="629"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="630"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="631"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="632"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="633"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="634"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="635"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="636"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="637"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="638"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="639"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="640"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="641"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="642"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="643"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="644"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="645"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="646"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="647"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="648"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="649"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="650"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="651"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="652"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="653"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="654"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="655"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="656"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="657"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="658"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="659"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="660"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="661"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="662"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="663"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="664"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="665"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="666"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="667"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="668"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="669"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="670"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="671"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="672"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="673"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="674"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="675"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="676"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="677"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="678"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="679"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="680"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="681"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="682"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="683"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="684"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="685"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="686"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="687"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="688"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="689"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="690"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="691"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="692"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="693"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="694"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="695"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="696"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="697"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="698"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="699"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="700"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="701"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="702"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="703"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="704"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="705"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="706"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="707"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="708"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="709"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="710"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="711"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="712"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="713"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="714"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="715"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="716"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="717"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="718"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="719"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="720"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="721"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="722"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="723"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="724"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="725"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="726"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="727"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="728"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="729"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="730"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="731"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="732"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="733"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="734"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="735"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="736"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="737"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="738"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="739"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="740"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="741"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="742"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="743"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="744"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="745"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="746"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="747"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="748"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="749"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="750"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="751"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="752"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="753"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="754"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="755"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="756"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="757"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="758"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="759"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="760"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="761"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="762"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="763"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="764"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="765"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="766"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="767"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="768"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="769"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="770"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="771"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="772"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="773"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="774"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="775"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="776"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="777"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="778"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="779"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="780"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="781"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="782"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="783"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="784"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="785"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="786"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="787"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="788"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="789"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="790"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="791"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="792"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="793"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="794"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="795"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="796"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="797"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="798"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="799"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="800"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="801"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="802"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="803"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="804"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="805"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="806"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="807"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="808"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="809"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="810"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="811"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="812"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="813"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="814"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="815"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="816"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="817"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="818"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="819"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="820"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="821"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="822"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="823"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="824"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="825"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="826"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="827"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="828"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="829"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="830"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="831"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="832"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="833"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="834"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="835"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="836"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="837"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="838"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="839"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="840"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="841"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="842"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="843"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="844"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="845"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="846"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="847"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="848"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="849"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="850"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="851"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="852"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="853"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="854"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="855"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="856"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="857"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="858"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="859"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="860"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="861"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="862"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="863"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="864"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="865"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="866"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="867"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="868"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="869"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="870"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="871"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="872"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="873"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="874"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="875"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="876"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="877"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="878"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="879"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="880"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="881"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="882"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="883"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="884"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="885"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="886"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="887"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="888"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="889"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="890"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="891"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="892"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="893"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="894"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="895"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="896"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="897"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="898"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="899"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="900"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="901"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="902"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="903"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="904"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="905"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="906"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="907"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="908"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="909"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="910"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="911"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="912"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="913"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="914"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="915"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="916"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="917"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="918"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="919"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="920"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="921"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="922"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="923"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="924"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="925"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="926"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="927"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="928"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="929"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="930"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="931"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="932"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="933"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="934"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="935"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="936"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="937"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="938"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="939"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="940"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="941"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="942"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="943"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="944"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="945"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="946"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="947"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="948"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="949"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="950"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="951"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="952"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="953"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="954"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="955"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="956"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="957"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="958"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="959"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="960"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="961"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="962"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="963"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="964"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="965"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="966"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="967"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="968"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="969"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="970"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="971"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="972"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="973"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="974"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="975"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="976"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="977"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="978"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="979"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="980"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="981"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="982"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="983"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="984"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="985"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="986"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="987"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="988"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="989"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="990"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="991"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="992"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="993"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="994"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="995"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="996"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="997"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="998"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="999"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1000"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1001"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1002"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1003"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1004"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1005"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1006"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1007"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1008"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1009"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1010"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1011"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1012"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1013"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1014"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1015"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1016"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1017"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1018"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1019"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1020"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1021"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1022"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1023"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1024"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1025"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1026"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1027"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1028"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1029"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1030"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1031"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1032"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1033"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1034"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1035"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1036"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1037"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1038"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1039"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1040"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1041"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1042"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1043"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1044"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1045"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1046"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1047"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1048"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1049"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1050"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1051"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1052"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1053"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1054"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1055"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1056"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1057"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1058"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1059"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1060"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1061"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1062"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1063"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1064"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1065"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1066"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1067"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1068"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1069"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1070"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1071"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1072"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1073"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1074"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1075"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1076"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1077"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1078"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1079"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1080"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1081"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1082"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1083"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1084"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1085"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1086"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1087"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1088"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1089"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1090"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1091"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1092"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1093"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1094"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1095"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1096"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1097"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1098"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1099"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1100"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1101"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1102"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1103"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1104"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1105"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1106"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1107"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1108"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1109"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1110"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1111"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1112"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1113"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1114"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1115"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1116"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1117"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1118"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1119"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1120"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1121"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1122"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1123"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1124"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1125"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1126"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1127"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1128"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1129"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1130"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1131"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1132"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1133"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1134"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1135"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1136"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1137"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1138"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1139"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1140"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1141"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1142"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1143"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1144"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1145"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1146"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1147"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1148"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1149"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1150"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1151"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1152"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1153"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1154"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1155"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1156"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1157"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1158"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1159"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1160"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1161"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1162"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1163"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1164"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1165"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1166"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1167"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1168"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1169"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1170"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1171"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1172"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1173"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1174"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1175"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1176"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1177"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1178"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1179"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1180"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1181"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="2" limit="3.000000" id="1182"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1183"/>
+</results>
+
+<results>
+  <opened sym="SYM" amount="-2" limit="3.000000" id="1184"/>
+</results>
+
 
 

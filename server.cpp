@@ -70,22 +70,30 @@ void * Server::handleRequest(void * info){
   Database db;
   Server server;
   db.openDatabase();
-  int *client_fd=(int*)info;
-  int num=0;
+  int *client_info=(int*)info;
+  int client_fd=*client_info;
   while(1){
     char message[65535]={0};
-    recv(*client_fd,message,sizeof(message),0);
+    recv(client_fd,message,sizeof(message),0);
     string xml(message);
-    cout<<xml<<endl;
+    //cout<<xml<<endl;
     if(xml=="end"){
-      cout<<"equals"<<endl;
+      cout<<"end"<<endl;
       return NULL;
     }
     xmlParser parser(xml);
     vector<string> result=parser.parseXML();
+    //stringstream ss;
+    for(size_t i=0;i<result.size();i++){
+      cout<<result[i]<<" ";
+      //ss<<result[i]<<" ";
+    }
+    cout<<endl;
+    //ss<<endl;
     string response=server.executeParserResult(result,db);
-    server.sendString(*client_fd,response);
-    num++;
+    server.sendString(client_fd,response);
+    //server.sendString(*client_fd,ss.str());
+    //server.sendString(client_fd,xml);
   }
 }
 
