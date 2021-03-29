@@ -59,8 +59,9 @@ void Database::createTableOrder(){
   string trans_id="TRANS_ID INT,\n";
   string time="TIME BIGINT NOT NULL,\n";
   string primary_key="CONSTRAINT ORDERPK PRIMARY KEY(ID),\n";
-  string foreign_key="CONSTRAINT ACCOUNTFK FOREIGN KEY(ACCOUNT_ID) REFERENCES ACCOUNT(ID) ON DELETE SET NULL ON UPDATE CASCADE\n";
-  string total=header+id+symbol+amount+price+type+status+account_id+trans_id+time+primary_key+foreign_key+ender;
+  string foreign_key="CONSTRAINT ACCOUNTFK FOREIGN KEY(ACCOUNT_ID) REFERENCES ACCOUNT(ID) ON DELETE SET NULL ON UPDATE CASCADE,\n";
+  string price_pos="CONSTRAINT pricepos CHECK (PRICE>0)\n";
+  string total=header+id+symbol+amount+price+type+status+account_id+trans_id+time+primary_key+foreign_key+price_pos+ender;
   executeSql(total);
 }
 
@@ -157,9 +158,12 @@ string Database::createOrder(string name,double amount,double price, int account
   }catch(pqxx::foreign_key_violation &e){
     return "This id does not exist in Account";
   }catch(pqxx::check_violation &e){
+    if(price<=0){
+      return "limit price should be positive";
+    }
     if(amount<0){
       return "You don't have enough amount to sell";
-    }else{
+    }else {
       return "You don't have enough balance to buy";
     }
   }catch (MyException &e){

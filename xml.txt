@@ -5,6 +5,7 @@ transactions 12345 query 0
 transactions 54321 order ABC -2 2
 transactions 12345 query 0 
 transactions 12345 order ABC 2 3
+transactions 12345 order ABC 2 -10
 transactions 12345 cancel 2 
 transactions 12345 query 10 
 transactions 1234 order ABC 200 3 query 10
