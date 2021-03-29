@@ -16,26 +16,18 @@
 class Server{
  private:
   const char* port_num;
-  Database db;
   int listener;
   std::vector<std::string> requestXMLs;
   std::vector<char> responseXMLs;
   void setUpListener();
   static void * handleRequest(void * info);
   std::string createResponse();
-  std::string executeTransactionsResult(std::vector<std::string> input);
-  std::string executeCreateResult(std::vector<std::string> input);
+  std::string executeTransactionsResult(std::vector<std::string> input, Database &db);
+  std::string executeCreateResult(std::vector<std::string> input, Database &db);
+  void createTables();
 public:
-  Server() :port_num("12345"){
-    try{
-      db.openDatabase();
-    }catch (const exception &e){
-      return;
-    }
-    db.createTables();
-    db.disconnect();
-  };
-  std::string executeParserResult(std::vector<std::string> input);
+  Server() :port_num("12345"){}
+  std::string executeParserResult(std::vector<std::string> input, Database &db);
   void sendString(int client_fd,string message);
   void run();
 };
