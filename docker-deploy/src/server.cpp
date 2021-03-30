@@ -75,10 +75,16 @@ void * Server::handleRequest(void * info){
   while(1){
     char message[65535]={0};
     recv(client_fd,message,sizeof(message),0);
-    string xml(message);
-    //cout<<xml<<endl;
-    if(xml=="end"){
+    string msg(message);
+    if(msg=="end"){
       cout<<"end"<<endl;
+      return NULL;
+    }
+    std::cout << msg << std::endl;
+    std::string xml;
+    xml = server.getXML(msg);
+    if (xml == "error") {
+      server.sendString(client_fd,"This input is not valid.");
       return NULL;
     }
     xmlParser parser(xml);
@@ -169,6 +175,30 @@ std::string Server::executeCreateResult(std::vector<std::string> input, Database
   return ans;
 }
 
+std::string Server::getXML(std::string msg) {
+  std::string errorMsg = "error";
+  size_t found = msg.find("\n");
+  std::string xml;
+  size_t length = 0;
+  if (found == std::string::npos) {
+    return errorMsg;
+  }
+  try {
+    length = std::stoi(msg.substr(0, found));
+  } catch(std::invalid_argument& e) {
+    return errorMsg;
+  }
+  if (found == msg.length() - 1) {
+    return errorMsg;   
+  } else {
+    xml = msg.substr(found + 1);
+  }
+  if (xml.length() != length) {
+    return errorMsg;
+  } else {
+    return xml;
+  }
+}
 int main() {
   Server server;
   server.run();

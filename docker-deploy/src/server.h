@@ -25,6 +25,7 @@ class Server{
   std::string executeTransactionsResult(std::vector<std::string> input, Database &db);
   std::string executeCreateResult(std::vector<std::string> input, Database &db);
   void createTables();
+  std::string getXML(std::string msg);
 public:
   Server() :port_num("12345"){}
   std::string executeParserResult(std::vector<std::string> input, Database &db);
