@@ -232,7 +232,7 @@ std::string Server::getXML(std::string msg) {
 
 std::string Server::createErrorResponse() {
   std::stringstream ans;
-  ans << "<results>\n" <<"  <error>This xml is not valid.</error>\n";
+  ans << "<results>\n" <<"  <error>This XML is not valid.</error>\n";
   ans << "</results>\n";
   return ans.str();
 }

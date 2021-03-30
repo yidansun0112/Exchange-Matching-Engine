@@ -19,6 +19,7 @@ private:
   std::string getTransactionXML(std::vector<std::string> tokens);
   std::string createHeader();
 public:
+  std::string createInvalidXML(std::string input);
   std::string createRequestXML(std::string input);
   std::string createCreateAccountXML(int userId, std::string msg);
   std::string createCreateSymbolXML(std::string symbol, int userId, std::string msg);

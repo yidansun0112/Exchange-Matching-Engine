@@ -3,7 +3,7 @@
 std::string xmlPrinter::createRequestXML(std::string input) {
   std::string ans;
   std::string xml;
-  size_t found = input.find(" //"); 
+  size_t found = input.find("#"); 
   if (found != std::string::npos) {
     input = input.substr(0, found);
   }
@@ -18,6 +18,18 @@ std::string xmlPrinter::createRequestXML(std::string input) {
   ans += std::to_string(xml.length());
   ans += "\n";
   ans += xml;
+  return ans;
+}
+
+std::string xmlPrinter::createInvalidXML(std::string input){
+  std::string ans;
+  size_t found = input.find("#"); 
+  if (found != std::string::npos) {
+    input = input.substr(0, found);
+  }
+  ans += std::to_string(input.length());
+  ans += "\n";
+  ans +=input;
   return ans;
 }
 

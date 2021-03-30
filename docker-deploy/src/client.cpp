@@ -42,9 +42,12 @@ void Client::sendRequest (){
   if (newfile.is_open()){   //checking whether the file is open
     std::string tp;
     while(getline(newfile, tp)){
-      //std::cout<<printer.createRequestXML(tp);
-      string request=printer.createRequestXML(tp);
-      //cout<<request<<endl;
+      string request;
+      if (std::string(filename) == "invalid.txt") {
+        request = printer.createInvalidXML(tp);
+      } else {
+        request = printer.createRequestXML(tp);
+      }
       sendString(request);
       recvResponse();
     }
@@ -59,41 +62,6 @@ void Client::recvResponse(){
   cout<<message<<endl;
 }
 
-// void Client::sendRequest(string str){
-//   xmlPrinter printer;
-//   string request=printer.createRequestXML(str);
-//   sendString(request);
-//   cout<<"before"<<endl;
-//   recvResponse();
-//   cout<<"after"<<endl;
-// }
-
-// void * oneRound(void * information){
-//   Thread_info *info=(Thread_info *)information;
-//   const char * hostname=info->hostname;
-//   const char * filename=info->filename;
-//   Client client(hostname,filename);
-//   client.buildConnection();
-//   client.sendRequest("transactions 54321 order SYM -2 3");
-//   cout<<"send"<<endl;
-//   //client.sendRequest("transactions 12345 order SYM 2 3");
-//   //client.sendRequest("transactions 54321 order SYM 2 3");
-//   //client.sendRequest("transactions 12345 order SYM -2 3");
-//   client.sendString("end");
-//   //client.closefd();
-//   return NULL;
-// }
-
-// void doCancel(const char * hostname,int round){
-//   Client client(hostname,"cancel.txt");
-//   client.buildConnection();
-//   client.sendRequest("transactions 54321 cancel 0");
-//   stringstream ss;
-//   ss<<"transactions 12345 cancel "<<4*round-1;
-//   client.sendRequest(ss.str());
-//   client.sendRequest("end");
-//   client.closefd();
-// }
 
 int main(int argc, char **argv){
   if(argc!=3){
