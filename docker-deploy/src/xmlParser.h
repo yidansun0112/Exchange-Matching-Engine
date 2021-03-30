@@ -35,10 +35,9 @@ private:
   void createParser();
  
 public:
-  std::vector<std::string> parseXML();
+  std::vector<std::string> parseXML(std::string inputXML);
   std::string getRoot(); // here for test
-  xmlParser(){};
-  xmlParser(std::string inputXML);
+  xmlParser();
   ~xmlParser(){
     if (m_doc) {
       m_doc->release();
@@ -46,12 +45,4 @@ public:
   }
 };
 
-class XmlDomErrorHandler : public HandlerBase
-{
-  public:
-    void fatalError(const SAXParseException &exc) {
-        printf("Fatal parsing error at line %d\n", (int)exc.getLineNumber());
-        exit(1);
-    }
-};
 #endif

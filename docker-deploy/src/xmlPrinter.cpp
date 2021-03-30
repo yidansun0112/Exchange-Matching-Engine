@@ -2,6 +2,7 @@
 
 std::string xmlPrinter::createRequestXML(std::string input) {
   std::string ans;
+  std::string xml;
   size_t found = input.find(" //"); 
   if (found != std::string::npos) {
     input = input.substr(0, found);
@@ -10,10 +11,13 @@ std::string xmlPrinter::createRequestXML(std::string input) {
   std::istream_iterator<std::string> beg(buf), end;
   std::vector<std::string> tokens(beg, end);
   if (tokens[0] == "create") {
-    return getCreateXML(tokens);
+    xml = getCreateXML(tokens);
   } else if (tokens[0] == "transactions") {
-    return getTransactionXML(tokens);
+    xml = getTransactionXML(tokens);
   }
+  ans += std::to_string(xml.length());
+  ans += "\n";
+  ans += xml;
   return ans;
 }
 

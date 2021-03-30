@@ -75,37 +75,45 @@ void * Server::handleRequest(void * info){
   while(1){
     char message[65535]={0};
     recv(client_fd,message,sizeof(message),0);
-    string xml(message);
-    //cout<<xml<<endl;
-    if(xml=="end"){
+    string msg(message);
+    if(msg=="end"){
       cout<<"end"<<endl;
       return NULL;
     }
-    xmlParser parser(xml);
-    vector<string> result=parser.parseXML();
-    //stringstream ss;
-    for(size_t i=0;i<result.size();i++){
-      cout<<result[i]<<" ";
-      //ss<<result[i]<<" ";
+    std::cout << msg << std::endl;
+    std::string xml;
+    xml = server.getXML(msg);
+    if (xml == "error") {
+      server.sendString(client_fd, server.createErrorResponse());
+      return NULL;
     }
-    cout<<endl;
-    //ss<<endl;
+    xmlParser reader;
+    vector<string> result;
+    try {
+      result = reader.parseXML(xml);
+    } catch(...) {
+      server.sendString(client_fd, server.createErrorResponse());
+      return NULL;
+    }
     string response=server.executeParserResult(result,db);
-    server.sendString(client_fd,response);
-    //server.sendString(*client_fd,ss.str());
-    //server.sendString(client_fd,xml);
+    if (response == "error") {
+      server.sendString(client_fd, server.createErrorResponse());
+    } else {
+      server.sendString(client_fd,response);
+    }
   }
 }
 
 std::string Server::executeParserResult(std::vector<std::string> input, Database &db) {
   if (input.size() == 0) {
-    std::string ans;
-    return ans;
+    return "error";
   }
   if (input[0] == "transaction id") {
     return executeTransactionsResult(input,db);
-  } else {
+  } else if (input[0] == "newUser" || input[0] == "newSymbol"){
     return executeCreateResult(input,db);
+  } else {
+    return "error";
   }
 }
 
@@ -118,20 +126,36 @@ std::string Server::executeTransactionsResult(std::vector<std::string> input, Da
     if (input[i] == "newOrder") {
       i++;
       std::string symbol = input[i++];
-      double amount = stod(input[i++]);
-      double price = stod(input[i++]);
+      double amount = 0;
+      double price = 0;
+      try {
+        amount = stod(input[i++]);
+        price = stod(input[i++]);
+      } catch(std::invalid_argument& e) {
+        return "error";
+      }
       std::string msg = db.createOrder(symbol, amount, price, accountId);
       ans += printer->createOrderXML(symbol, amount, price, accountId, msg);
       continue;
     } else if (input[i] == "newQuery") {
       i++;
-      int trans_id = stoi(input[i++]);
+      int trans_id = 0;
+      try {
+        trans_id = stoi(input[i++]);
+      } catch(std::invalid_argument& e) {
+        return "error";
+      }
       std::vector<std::string> msg = db.queryOrder(trans_id, accountId);
       ans += printer->createQueryXML(trans_id, msg);
       continue;
     } else if (input[i] == "newCancel") {
       i++;
-      int trans_id = stoi(input[i++]);
+      int trans_id = 0;
+      try {
+        trans_id = stoi(input[i++]);
+      } catch(std::invalid_argument& e) {
+        return "error";
+      }
       std::vector<std::string> msg = db.cancelOrder(trans_id, accountId);
       ans += printer->createCancelXML(trans_id, msg);
       continue;
@@ -148,8 +172,14 @@ std::string Server::executeCreateResult(std::vector<std::string> input, Database
   while (i < input.size()) {
     if (input[i] == "newUser") {
       i++;
-      int id = stoi(input[i++]);
-      double balance = stod(input[i++]);
+      int id = 0;
+      double balance = 0;
+      try {
+        id = stoi(input[i++]);
+        balance = stod(input[i++]);
+      } catch(std::invalid_argument& e) {
+        return "error";
+      }
       std::string msg = db.createAccount(id, balance);
       ans += printer->createCreateAccountXML(id, msg);
       continue;
@@ -157,18 +187,55 @@ std::string Server::executeCreateResult(std::vector<std::string> input, Database
       i++;
       std::string symbol = input[i++];
       while (i < input.size() && input[i]!= "newSymbol") {
-        int id = stoi(input[i++]);
-        int share = stoi(input[i++]);
+        int id = 0;
+        int share = 0;
+        try {
+          id = stoi(input[i++]);
+          share = stoi(input[i++]);
+        } catch(std::invalid_argument& e) {
+          return "error";
+        }
         std::string msg = db.createSymbol(symbol, id, share);
         ans += printer->createCreateSymbolXML(symbol,id, msg);
       }
       continue;
     }
   }
-  ans += "</results>";
+  ans += "</results>\n";
   return ans;
 }
 
+std::string Server::getXML(std::string msg) {
+  std::string errorMsg = "error";
+  size_t found = msg.find("\n");
+  std::string xml;
+  size_t length = 0;
+  if (found == std::string::npos) {
+    return errorMsg;
+  }
+  try {
+    length = std::stoi(msg.substr(0, found));
+  } catch(std::invalid_argument& e) {
+    return errorMsg;
+  }
+  if (found == msg.length() - 1) {
+    return errorMsg;   
+  } else {
+    xml = msg.substr(found + 1);
+  }
+  if (xml.length() != length) {
+    return errorMsg;
+  } else {
+    return xml;
+  }
+}
+
+std::string Server::createErrorResponse() {
+  std::stringstream ans;
+  ans << "<results>\n" <<"  <error>This xml is not valid.</error>\n";
+  ans << "</results>\n";
+  return ans.str();
+}
 int main() {
   Server server;
   server.run();
