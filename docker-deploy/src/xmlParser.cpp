@@ -1,11 +1,8 @@
 #include "xmlParser.h"
 using namespace xercesc;
 
-xmlParser::xmlParser(std::string inputXML):m_doc(NULL) {
+xmlParser::xmlParser():m_doc(NULL) {
   createParser();
-  xercesc::MemBufInputSource src((const XMLByte*)inputXML.c_str(), inputXML.length(), "dummy", false);
-  parser->parse(src);
-  m_doc = parser->adoptDocument();
 }
  
 
@@ -13,8 +10,6 @@ void xmlParser::createParser() {
   if (!parser) {
     XMLPlatformUtils::Initialize();
     parser = new XercesDOMParser();
-    ErrorHandler* errorHandler = (ErrorHandler*) new XmlDomErrorHandler();
-    parser->setErrorHandler(errorHandler);
   }
 }
 
@@ -91,7 +86,10 @@ std::string xmlParser::getRoot() {
   return ans;
 }
 
-std::vector<std::string> xmlParser::parseXML(){
+std::vector<std::string> xmlParser::parseXML(std::string inputXML){
+  xercesc::MemBufInputSource src((const XMLByte*)inputXML.c_str(), inputXML.length(), "dummy", false);
+  parser->parse(src);
+  m_doc = parser->adoptDocument();
   if (getRoot() == "create") {
     return parseCreateXML();
   } else if (getRoot() == "transactions") {
