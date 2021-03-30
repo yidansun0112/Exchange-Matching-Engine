@@ -1,5 +1,6 @@
-asdasdasd
-<crea> </crea>
-<create> <sadasd> </create>
-<create>\n  <account id="12345" balance="10"/\n
-
+asdasdasd #random string
+<crea> </crea> #wrong field xml
+<create> <sadasd> </create> #wrong field xml
+<create>\n  <account id="12345" balance="10"/\n #xml that not closed correctly
+<create>\n  <account id="12345" balane="10"/> </create>\n #xml with invalid field name
+<create>\n  <account id="12345" balance="10"/> </create>\n        #xml aa 
