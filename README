@@ -1,0 +1,13 @@
+Please cd docker-deploy
+run: "sudo docker-compose up" to start server
+
+If you want to test by using our test client and testcases,
+ you should:
+ cd docker-deploy/src/
+ make clean
+ make
+ then run client as: ./client ipaddress testfile
+              like:  ./client 127.0.0.1 ./testing/create.txt
+
+You can check our testcases by looking into docker-deploy/src/testing
+We have comments in each testfile
