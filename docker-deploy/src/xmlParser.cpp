@@ -10,6 +10,8 @@ void xmlParser::createParser() {
   if (!parser) {
     XMLPlatformUtils::Initialize();
     parser = new XercesDOMParser();
+    parser->setValidationScheme(XercesDOMParser::Val_Always);
+    parser->setDoNamespaces(true); // optional
   }
 }
 
@@ -80,7 +82,16 @@ std::string xmlParser::getParentAttribute(const char* parentTag, const char* att
 
 std::string xmlParser::getRoot() {
   DOMElement* elementRoot = m_doc->getDocumentElement();
-  char* temp2 = XMLString::transcode(elementRoot->getTagName());
+  char* temp2 = NULL;
+  if (elementRoot == NULL) {
+    return "error";
+  }
+  try {
+    const XMLCh* temp = elementRoot->getTagName();
+    temp2 = XMLString::transcode(temp);
+  } catch (...) {
+    return "error";
+  }
   std::string ans = temp2;
   XMLString::release(&temp2);
   return ans;

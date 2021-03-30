@@ -21,6 +21,14 @@ std::string xmlPrinter::createRequestXML(std::string input) {
   return ans;
 }
 
+std::string xmlPrinter::createInvalidXML(std::string input){
+  std::string ans;
+  ans += std::to_string(input.length());
+  ans += "\n";
+  ans +=input;
+  return ans;
+}
+
 std::string xmlPrinter::createHeader() {
   return "\"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\"\n";
 }
