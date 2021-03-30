@@ -1,4 +1,0 @@
-transactions 54321 order SYM -2 3
-transactions 12345 order SYM 2 3 
-transactions 54321 order SYM 2 3
-transactions 12345 order SYM -2 3

@@ -3,13 +3,15 @@ pthread_mutex_t dbmutex = PTHREAD_MUTEX_INITIALIZER;
 int Database::trans_id=0;
 
 void Database::openDatabase(){
-  C = new connection("dbname=exchange user=postgres password=passw0rd");
+  C = new connection("dbname=exchange user=postgres password=passw0rd host=db port=5432");
   if (C->is_open()) {
     cout << "Opened database successfully: " << C->dbname() << endl;
   } else {
     cerr << "Can't open database" << endl;
     throw exception();
   }
+  string command="set transaction isolation level serializable;";
+  executeSql(command);
 }
 
 void Database::dropTable(){
