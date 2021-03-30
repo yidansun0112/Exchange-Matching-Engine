@@ -1,5 +1,5 @@
 #include "database.hpp"
-
+pthread_mutex_t dbmutex = PTHREAD_MUTEX_INITIALIZER;
 int Database::trans_id=0;
 
 void Database::openDatabase(){
@@ -138,6 +138,10 @@ string Database::createSymbol(string name, int owner, int amount){
 }
 
 string Database::createOrder(string name,double amount,double price, int account_id){
+  pthread_mutex_lock(&dbmutex);
+  int orderid=trans_id;
+  trans_id++;
+  pthread_mutex_unlock(&dbmutex);
   stringstream ss;
   work W(*C);
   ss<<"INSERT INTO ORDERS (SYM,AMOUNT,PRICE,TYPE,STATUS,ACCOUNT_ID,TRANS_ID,TIME) VALUES(";
@@ -155,7 +159,7 @@ string Database::createOrder(string name,double amount,double price, int account
     }else{
       return "Order amount cannot be zero";
     }
-    ss<<"'open'"<<","<<account_id<<","<<trans_id<<","<<time<<");\n";
+    ss<<"'open'"<<","<<account_id<<","<<orderid<<","<<time<<");\n";
     string command=ss.str();
     executeSql(command);
   }catch(pqxx::foreign_key_violation &e){
@@ -174,14 +178,13 @@ string Database::createOrder(string name,double amount,double price, int account
   }
   
   if(amount<0){
-    matchSellOrder(name, -amount, price, account_id, trans_id);
+    matchSellOrder(name, -amount, price, account_id, orderid);
   }else{
-    matchBuyOrder(name, amount, price, account_id, trans_id);
+    matchBuyOrder(name, amount, price, account_id, orderid);
   }
 
   stringstream sss;
-  sss<<"success id is "<<trans_id;
-  trans_id++;
+  sss<<"success id is "<<orderid;
   return sss.str();
 }
 

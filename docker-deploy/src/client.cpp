@@ -58,7 +58,9 @@ void Client::sendRequest (){
 
 void Client::recvResponse(){
   char message[65536]={0};
-  recv(server_fd,message,sizeof(message),0);
+  if(recv(server_fd,message,sizeof(message),0)<=0){
+    return;
+  }
   cout<<message<<endl;
 }
 

@@ -1,5 +1,7 @@
 #include "server.h"
 
+pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
+
 void Server::createTables(){
   try{
       Database db;
@@ -44,18 +46,23 @@ void Server::setUpListener(){
 void Server::run(){
   createTables();
   setUpListener();
+  // vector<int> fds;
+  // int i=0;
   while(1) {
     try{
       int client_fd;
       struct sockaddr_storage socket_addr;
       std::string ip;
       socklen_t socket_addr_len = sizeof(socket_addr);
+      pthread_mutex_lock(&mutex);
       if (( client_fd = accept(listener, (struct sockaddr *)&socket_addr, &socket_addr_len)) == -1) {
         continue;
       }
+      //fds.push_back(client_fd);
       pthread_t thread;
       pthread_create(&thread,NULL,handleRequest,&client_fd);
       cout<<"waiting for next connect"<<endl;
+      //i++;
     }catch(exception &e){
       cerr<<e.what()<<endl;
     }
@@ -72,9 +79,12 @@ void * Server::handleRequest(void * info){
   db.openDatabase();
   int *client_info=(int*)info;
   int client_fd=*client_info;
+  pthread_mutex_unlock(&mutex);
   while(1){
     char message[65535]={0};
-    recv(client_fd,message,sizeof(message),0);
+    if(recv(client_fd,message,sizeof(message),0)<=0){
+      return NULL;
+    }
     string msg(message);
     if(msg=="end"){
       cout<<"end"<<endl;
