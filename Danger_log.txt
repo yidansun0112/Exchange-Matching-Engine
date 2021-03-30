@@ -1,0 +1,9 @@
+Danger log
+
+1.Carefully handle database error:
+  1.1 When insert into database, we may meet some request violates database defination.
+      For example, if client try to create two accounts with the same id, postgres will throw
+      pqxx::unique_violation, so I will catch this exception and send back error message to client.
+  1.2 We set constrains for symbol amount and account balance.
+      If client try to send some request to make amount or balance become negative, the database
+      will throw pqxx:check_violation. Then we will catch these exception and send error messgae to client.
