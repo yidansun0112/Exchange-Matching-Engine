@@ -30,16 +30,16 @@ public:
   Client(const char * host, const char * name):hostname(host),port_num("12345"),filename(name){};
   void run();
   void buildConnection();
-  void sendRequest(string str);
+  // void sendRequest(string str);
   void sendString(string message);
-  void closefd(){
-    close(server_fd);
-  }
+  // void closefd(){
+  //   close(server_fd);
+  // }
 };
 
-class Thread_info{
-public:
-    const char * hostname;
-    const char * filename;
-    Thread_info(const char * hostname, const char * filename):hostname(hostname),filename(filename){}
-};
+// class Thread_info{
+// public:
+//     const char * hostname;
+//     const char * filename;
+//     Thread_info(const char * hostname, const char * filename):hostname(hostname),filename(filename){}
+// };

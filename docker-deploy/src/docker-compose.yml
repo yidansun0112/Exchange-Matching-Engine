@@ -9,6 +9,9 @@ services:
       - POSTGRES_PASSWORD=passw0rd
     volumes:
         - data-volume:/var/run/postgresql/data
+    expose: 
+      - "5432"
+      - "54321:5432"
   
   server:
     user: root
