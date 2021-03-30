@@ -1,2 +1,4 @@
 create user 12345 10000 symbol SYM 12345 100
 create user 54321 10000 symbol SYM 54321 100
+transactions 54321 order SYM -5 3
+transactions 12345 order SYM 2 3
