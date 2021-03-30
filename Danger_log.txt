@@ -1,9 +1,28 @@
 Danger log
 
-1.Carefully handle database error:
+1.Carefully handle database errors:
   1.1 When insert into database, we may meet some request violates database defination.
       For example, if client try to create two accounts with the same id, postgres will throw
       pqxx::unique_violation, so I will catch this exception and send back error message to client.
   1.2 We set constrains for symbol amount and account balance.
       If client try to send some request to make amount or balance become negative, the database
       will throw pqxx:check_violation. Then we will catch these exception and send error messgae to client.
+2. Input XML errors:
+  2.1 Incomplete message
+      The input format of a correct message is that first line has a number which indicate the length of message, 
+      then follows the message. I first check if there is a line of length, if not, the message is not complete.
+      Then I check if the length of the message is equal to that number, after confirming they are equal, I will
+      pass the message into XML parser, otherwise I will send a error response to the client.
+  2.2 XML with wrong format
+      When I initialize the XML parser, I set the format checker on, which means if the XML is not complete, e.g. missing
+      the end tag, it will cause exception. After catching that, I will send an error message back to client. Also,
+      as the fields of requests sent to server are fixed, so if there are invalid fields or missing some neccessary fields,
+      the parser will cause exception and the server will send the error message. 
+  2.3 Invalid variable type 
+      We used vector<string> to restore the parser result. As the parser do not know the variable type of each field, so 
+      there may be some invalid value for some fields, e.g. "ABC" in field which should be a double. Therefore, when I 
+      perform the transformation from string to the field's type, I catach if there is an exception happening. If so, the 
+      executer will return "error" and the server will send error message back to client.     
+
+        
+      
