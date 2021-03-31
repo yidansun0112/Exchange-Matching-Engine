@@ -1,8 +1,8 @@
-create user 12345 100 symbol SYM 12345 10
-create symbol SYM 54321 10
-create user 54321 10.3
-create symbol SYM 34567 10
-create symbol SYM 12345 -10
-create user 34567 -100
-create user 54321 20
-create user 34567 10 45678 10
+create user 12345 100 symbol SYM 12345 10 # create user and symbol
+create symbol SYM 54321 10 # create symbol for non-existed user
+create user 54321 10.3 # only create user
+create symbol SYM 12345 10 # only create symbol
+create symbol SYM 12345 -10 # create symbol with negative shares
+create user 34567 -100 # create user with negative balance
+create user 54321 20 # create existed user
+create user 34567 10 45678 10 # create two user at a time
